@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import {
   Phone,
   MessageCircle,
@@ -17,7 +15,6 @@ import {
   Star,
   ExternalLink,
 } from "lucide-react";
-import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeader } from "@/components/ui/section-header";
@@ -739,41 +736,20 @@ export function LocationPageTemplate({ region }: LocationPageProps) {
   const currentServiceAreaContent = serviceAreaContent[region.id] || serviceAreaContent["havelland"];
 
   return (
-    <Layout>
-      <Helmet>
-        <title>{region.metaTitle}</title>
-        <meta name="description" content={region.metaDescription} />
-        <link rel="canonical" href={`${COMPANY_INFO.website}${region.slug}`} />
-        <meta property="og:title" content={region.metaTitle} />
-        <meta property="og:description" content={region.metaDescription} />
-        <meta property="og:url" content={`${COMPANY_INFO.website}${region.slug}`} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${COMPANY_INFO.website}/og-image.jpg`} />
-        <script type="application/ld+json">
-          {JSON.stringify(locationSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(localBusinessSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
-        {faqSchema && (
-          <script type="application/ld+json">
-            {JSON.stringify(faqSchema)}
-          </script>
-        )}
-        <script type="application/ld+json">
-          {JSON.stringify(reviewSchema)}
-        </script>
-      </Helmet>
+    <>
+      {/* JSON-LD im Body (fuer Google gueltig); <head>-Meta liefert das Astro-Layout */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(locationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary to-primary/80 py-16 text-primary-foreground lg:py-24">
         <div className="section-container relative">
           <div className="mx-auto max-w-3xl text-center">
             <nav className="mb-6 text-sm text-primary-foreground/90">
-              <Link to="/" className="hover:text-primary-foreground">Startseite</Link>
+              <a href="/" className="hover:text-primary-foreground">Startseite</a>
               <span className="mx-2">/</span>
               <span>Entrümpelung {region.name}</span>
             </nav>
@@ -917,7 +893,7 @@ export function LocationPageTemplate({ region }: LocationPageProps) {
         />
         <div className="mx-auto grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2">
           {SERVICES.map((service) => (
-            <Link key={service.id} to={service.slug}>
+            <a key={service.id} href={service.slug}>
               <Card className="card-hover">
                 <CardContent className="flex items-center gap-4 p-4">
                   <CheckCircle2 className="h-6 w-6 text-success" />
@@ -928,7 +904,7 @@ export function LocationPageTemplate({ region }: LocationPageProps) {
                   <ArrowRight className="ml-auto h-5 w-5 text-muted-foreground" />
                 </CardContent>
               </Card>
-            </Link>
+            </a>
           ))}
         </div>
       </section>
@@ -972,12 +948,12 @@ export function LocationPageTemplate({ region }: LocationPageProps) {
             />
             <div className="mx-auto flex max-w-4xl flex-wrap justify-center gap-3">
               {neighbours.map((n) => (
-                <Link key={n.id} to={n.slug}>
+                <a key={n.id} href={n.slug}>
                   <Button variant="outline" size="sm" className="gap-2">
                     <MapPin className="h-4 w-4" />
                     Entrümpelung {n.name}
                   </Button>
-                </Link>
+                </a>
               ))}
             </div>
           </section>
@@ -1009,8 +985,8 @@ export function LocationPageTemplate({ region }: LocationPageProps) {
 
               {/* Deep-Links: Schnellzugriff aus dem lokalen FAQ */}
               <div className="mt-8 grid gap-3 sm:grid-cols-3">
-                <Link
-                  to="/preise#rechner"
+                <a
+                  href="/preise#rechner"
                   className="group flex items-center gap-3 rounded-xl border bg-card p-4 shadow-sm transition-all hover:border-primary hover:shadow-md"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground">
@@ -1020,9 +996,9 @@ export function LocationPageTemplate({ region }: LocationPageProps) {
                     <p className="text-sm font-semibold">Sofortpreis berechnen</p>
                     <p className="text-xs text-muted-foreground">Kostenrechner für {region.name}</p>
                   </div>
-                </Link>
-                <Link
-                  to="/preise"
+                </a>
+                <a
+                  href="/preise"
                   className="group flex items-center gap-3 rounded-xl border bg-card p-4 shadow-sm transition-all hover:border-primary hover:shadow-md"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground">
@@ -1032,9 +1008,9 @@ export function LocationPageTemplate({ region }: LocationPageProps) {
                     <p className="text-sm font-semibold">Alle Festpreise</p>
                     <p className="text-xs text-muted-foreground">Volumen-Tarife & Garantie</p>
                   </div>
-                </Link>
-                <Link
-                  to={SERVICES[0].slug}
+                </a>
+                <a
+                  href={SERVICES[0].slug}
                   className="group flex items-center gap-3 rounded-xl border bg-card p-4 shadow-sm transition-all hover:border-primary hover:shadow-md"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground">
@@ -1044,7 +1020,7 @@ export function LocationPageTemplate({ region }: LocationPageProps) {
                     <p className="text-sm font-semibold">Beliebte Leistung</p>
                     <p className="text-xs text-muted-foreground">{SERVICES[0].title}</p>
                   </div>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -1089,6 +1065,6 @@ export function LocationPageTemplate({ region }: LocationPageProps) {
         title={`Jetzt Entrümpelung in ${region.name} anfragen`}
         description="Kostenlose Besichtigung, verbindlicher Festpreis, besenreine Übergabe."
       />
-    </Layout>
+    </>
   );
 }

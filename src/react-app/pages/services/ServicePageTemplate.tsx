@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import {
   Phone,
   MessageCircle,
@@ -23,7 +21,6 @@ import {
   Timer,
   Award,
 } from "lucide-react";
-import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeader } from "@/components/ui/section-header";
@@ -137,32 +134,13 @@ export function ServicePageTemplate({
   ];
 
   return (
-    <Layout>
-      <Helmet>
-        <title>{service.metaTitle}</title>
-        <meta name="description" content={service.metaDescription} />
-        <link rel="canonical" href={`${COMPANY_INFO.website}${service.slug}`} />
-        <meta property="og:title" content={service.metaTitle} />
-        <meta property="og:description" content={service.metaDescription} />
-        <meta property="og:url" content={`${COMPANY_INFO.website}${service.slug}`} />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content={`${COMPANY_INFO.website}/og-image.jpg`} />
-        <script type="application/ld+json">
-          {JSON.stringify(serviceSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(localBusinessSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(reviewSchema)}
-        </script>
-      </Helmet>
+    <>
+      {/* JSON-LD im Body (fuer Google gueltig); <head>-Meta liefert das Astro-Layout */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary to-primary/80 py-16 text-primary-foreground lg:py-24">
@@ -171,7 +149,7 @@ export function ServicePageTemplate({
           <div className="mx-auto max-w-3xl text-center">
             {/* Breadcrumb */}
             <nav className="mb-6 text-sm text-primary-foreground/90">
-              <Link to="/" className="hover:text-primary-foreground">Startseite</Link>
+              <a href="/" className="hover:text-primary-foreground">Startseite</a>
               <span className="mx-2">/</span>
               <span>{service.title}</span>
             </nav>
@@ -358,12 +336,12 @@ export function ServicePageTemplate({
               <Clock className="mr-1 inline h-4 w-4" />
               Preise gültig bis März 2026 | Letzte Aktualisierung: Januar 2026
             </p>
-            <Link to="/preise">
+            <a href="/preise">
               <Button size="lg" className="gap-2">
                 Alle Preise ansehen
                 <ArrowRight className="h-4 w-4" />
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -489,12 +467,12 @@ export function ServicePageTemplate({
               </div>
               <div className="flex flex-wrap justify-center gap-2">
                 {REGIONS.filter((r) => r.id !== "havelland").map((region) => (
-                  <Link key={region.id} to={region.slug}>
+                  <a key={region.id} href={region.slug}>
                     <Button variant="outline" size="sm" className="gap-2 hover:border-primary hover:bg-primary/5">
                       <MapPin className="h-4 w-4 text-primary" />
                       {region.name}
                     </Button>
-                  </Link>
+                  </a>
                 ))}
               </div>
               <p className="mt-5 text-center text-sm text-muted-foreground">
@@ -528,8 +506,8 @@ export function ServicePageTemplate({
 
           {/* Deep-Links: Schnellzugriff aus dem FAQ heraus */}
           <div className="mt-8 grid gap-3 sm:grid-cols-3">
-            <Link
-              to="/preise#rechner"
+            <a
+              href="/preise#rechner"
               className="group flex items-center gap-3 rounded-xl border bg-card p-4 shadow-sm transition-all hover:border-primary hover:shadow-md"
             >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground">
@@ -539,9 +517,9 @@ export function ServicePageTemplate({
                 <p className="text-sm font-semibold">Sofortpreis berechnen</p>
                 <p className="text-xs text-muted-foreground">Kostenrechner für {service.shortTitle}</p>
               </div>
-            </Link>
-            <Link
-              to="/preise"
+            </a>
+            <a
+              href="/preise"
               className="group flex items-center gap-3 rounded-xl border bg-card p-4 shadow-sm transition-all hover:border-primary hover:shadow-md"
             >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground">
@@ -551,9 +529,9 @@ export function ServicePageTemplate({
                 <p className="text-sm font-semibold">Alle Festpreise</p>
                 <p className="text-xs text-muted-foreground">Volumen-Tarife im Überblick</p>
               </div>
-            </Link>
-            <Link
-              to={REGIONS.find((r) => r.isHeadquarters)?.slug || "/brieselang"}
+            </a>
+            <a
+              href={REGIONS.find((r) => r.isHeadquarters)?.slug || "/brieselang"}
               className="group flex items-center gap-3 rounded-xl border bg-card p-4 shadow-sm transition-all hover:border-primary hover:shadow-md"
             >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground">
@@ -563,7 +541,7 @@ export function ServicePageTemplate({
                 <p className="text-sm font-semibold">Vor Ort im Havelland</p>
                 <p className="text-xs text-muted-foreground">Brieselang, Falkensee, Nauen & mehr</p>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -580,9 +558,9 @@ export function ServicePageTemplate({
             {SERVICES.filter((s) => s.id !== service.id).slice(0, 8).map((other) => {
               const Icon = iconMap[other.icon] || Home;
               return (
-                <Link
+                <a
                   key={other.id}
-                  to={other.slug}
+                  href={other.slug}
                   className="group flex flex-col items-center gap-2 rounded-xl border bg-card p-4 text-center shadow-sm transition-all hover:border-primary hover:shadow-md"
                   aria-label={`Mehr zu ${other.shortTitle}`}
                 >
@@ -590,7 +568,7 @@ export function ServicePageTemplate({
                     <Icon className="h-5 w-5" />
                   </div>
                   <span className="text-sm font-semibold leading-tight">{other.shortTitle}</span>
-                </Link>
+                </a>
               );
             })}
           </div>
@@ -602,6 +580,6 @@ export function ServicePageTemplate({
         title={`Jetzt ${service.title} anfragen`}
         description="Kostenlose Besichtigung, verbindlicher Festpreis, besenreine Übergabe."
       />
-    </Layout>
+    </>
   );
 }

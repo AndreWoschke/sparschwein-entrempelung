@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SERVICES, REGIONS } from "@/lib/seo";
+import { LocationPageTemplate } from "@/react-app/pages/locations/LocationPageTemplate";
+import WohnungsentruempelungPage from "@/react-app/pages/services/WohnungsentruempelungPage";
+import HausentruempelungPage from "@/react-app/pages/services/HausentruempelungPage";
+import KellerentruempelungPage from "@/react-app/pages/services/KellerentruempelungPage";
+import DachbodenentruempelungPage from "@/react-app/pages/services/DachbodenentruempelungPage";
+import HaushaltsaufloesungPage from "@/react-app/pages/services/HaushaltsaufloesungPage";
+import GewerbeentruempelungPage from "@/react-app/pages/services/GewerbeentruempelungPage";
+import SchrottabholungPage from "@/react-app/pages/services/SchrottabholungPage";
+import ContainerdienstPage from "@/react-app/pages/services/ContainerdienstPage";
+
+export function getStaticPaths() {
+  const services = SERVICES.map((s) => ({
+    params: { slug: s.slug.replace(/^\//, "") },
+    props: { kind: "service", slug: s.slug, title: s.metaTitle, description: s.metaDescription },
+  }));
+  const locations = REGIONS.map((r) => ({
+    params: { slug: r.slug.replace(/^\//, "") },
+    props: { kind: "location", slug: r.slug, title: r.metaTitle, description: r.metaDescription, region: r },
+  }));
+  return [...services, ...locations];
+}
+
+const { kind, slug, title, description, region } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} canonicalPath={slug}>
+  {kind === "location" && <LocationPageTemplate region={region} client:load />}
+  {slug === "/wohnungsentruempelung" && <WohnungsentruempelungPage client:load />}
+  {slug === "/hausentruempelung" && <HausentruempelungPage client:load />}
+  {slug === "/kellerentruempelung" && <KellerentruempelungPage client:load />}
+  {slug === "/dachbodenentruempelung" && <DachbodenentruempelungPage client:load />}
+  {slug === "/haushaltsaufloesung" && <HaushaltsaufloesungPage client:load />}
+  {slug === "/firmen-gewerbeentruempelung" && <GewerbeentruempelungPage client:load />}
+  {slug === "/schrottabholung" && <SchrottabholungPage client:load />}
+  {slug === "/containerdienst-brieselang" && <ContainerdienstPage client:load />}
+</BaseLayout>

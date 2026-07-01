@@ -59,6 +59,11 @@ const ogImage = new URL("/og-image.jpg", Astro.site).href;
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     />
 
+    <!-- Island-Wrapper layout-transparent machen (sonst bricht der Seitenfluss) -->
+    <style is:global>
+      astro-island { display: contents; }
+    </style>
+
     <!-- Structured data (JSON-LD) -->
     {
       jsonLd.map((schema) => (
