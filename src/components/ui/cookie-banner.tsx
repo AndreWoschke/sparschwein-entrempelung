@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback, memo } from "react";
-import { Link } from "react-router-dom";
 import { Cookie, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -100,12 +99,12 @@ export const CookieBanner = memo(function CookieBanner() {
                 Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten. 
                 Essentielle Cookies sind für die Grundfunktionen erforderlich. Optionale Cookies helfen uns, 
                 die Website zu verbessern und relevante Inhalte anzuzeigen.{" "}
-                <Link 
-                  to="/datenschutz" 
+                <a 
+                  href="/datenschutz" 
                   className="font-medium text-primary underline hover:text-primary/80"
                 >
                   Mehr erfahren
-                </Link>
+                </a>
               </p>
             </div>
 

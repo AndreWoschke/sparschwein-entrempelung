@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Facebook } from "lucide-react";
 import { COMPANY_INFO, SERVICES, REGIONS } from "@/lib/seo";
 
@@ -60,12 +59,12 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               {SERVICES.map((service) => (
                 <li key={service.id}>
-                  <Link
-                    to={service.slug}
+                  <a
+                    href={service.slug}
                     className="text-primary-foreground/80 hover:text-primary-foreground hover:underline"
                   >
                     {service.title}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -77,12 +76,12 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               {REGIONS.map((region) => (
                 <li key={region.id}>
-                  <Link
-                    to={region.slug}
+                  <a
+                    href={region.slug}
                     className="text-primary-foreground/80 hover:text-primary-foreground hover:underline"
                   >
                     Entrümpelung {region.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -94,44 +93,44 @@ export function Footer() {
               <h3 className="mb-4 text-lg font-semibold">Navigation</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link
-                    to="/"
+                  <a
+                    href="/"
                     className="text-primary-foreground/80 hover:text-primary-foreground hover:underline"
                   >
                     Startseite
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    to="/#ablauf"
+                  <a
+                    href="/#ablauf"
                     className="text-primary-foreground/80 hover:text-primary-foreground hover:underline"
                   >
                     So läuft es ab
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    to="/preise"
+                  <a
+                    href="/preise"
                     className="text-primary-foreground/80 hover:text-primary-foreground hover:underline"
                   >
                     Preise
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    to="/#kundenstimmen"
+                  <a
+                    href="/#kundenstimmen"
                     className="text-primary-foreground/80 hover:text-primary-foreground hover:underline"
                   >
                     Glückliche Kunden
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    to="/#faq"
+                  <a
+                    href="/#faq"
                     className="text-primary-foreground/80 hover:text-primary-foreground hover:underline"
                   >
                     FAQ
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </nav>

@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { Menu, X, Phone, MessageCircle, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { COMPANY_INFO, SERVICES, REGIONS } from "@/lib/seo";
@@ -52,7 +51,7 @@ export function Header() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2">
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-xl">
               🐷
             </div>
@@ -64,7 +63,7 @@ export function Header() {
                 Entrümpelung
               </span>
             </div>
-          </Link>
+          </a>
 
           {/* Desktop Navigation - Leistungen Dropdown + Preise */}
           <div className="hidden lg:flex lg:items-center lg:gap-1">
@@ -78,12 +77,12 @@ export function Header() {
               <DropdownMenuContent align="start" className="w-56 bg-background border border-border shadow-lg z-50">
                 {SERVICES.map((service) => (
                   <DropdownMenuItem key={service.id} asChild>
-                    <Link
-                      to={service.slug}
+                    <a
+                      href={service.slug}
                       className="cursor-pointer w-full px-3 py-2 text-sm hover:bg-secondary hover:text-primary"
                     >
                       {service.title}
-                    </Link>
+                    </a>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -98,28 +97,28 @@ export function Header() {
               <DropdownMenuContent align="start" className="w-64 max-h-[70vh] overflow-y-auto bg-background border border-border shadow-lg z-50">
                 {REGIONS.map((region) => (
                   <DropdownMenuItem key={region.id} asChild>
-                    <Link
-                      to={region.slug}
+                    <a
+                      href={region.slug}
                       className="cursor-pointer w-full px-3 py-2 text-sm hover:bg-secondary hover:text-primary"
                     >
                       {region.name}
-                    </Link>
+                    </a>
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
-            <Link
-              to="/preise"
+            <a
+              href="/preise"
               className="rounded-md px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-primary"
             >
               Preise
-            </Link>
-            <Link
-              to="/blog"
+            </a>
+            <a
+              href="/blog"
               className="rounded-md px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary hover:text-primary"
             >
               Ratgeber
-            </Link>
+            </a>
           </div>
 
           {/* CTA Buttons - Phone + WhatsApp */}
@@ -178,14 +177,14 @@ export function Header() {
             {mobileServicesOpen && (
               <div className="border-l-2 border-border ml-4 pl-1 pb-1">
                 {SERVICES.map((service) => (
-                  <Link
+                  <a
                     key={service.id}
-                    to={service.slug}
+                    href={service.slug}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block rounded-md px-3 py-1.5 text-sm text-muted-foreground hover:bg-secondary hover:text-primary"
                   >
                     {service.title}
-                  </Link>
+                  </a>
                 ))}
               </div>
             )}
@@ -203,32 +202,32 @@ export function Header() {
             {mobileRegionsOpen && (
               <div className="border-l-2 border-border ml-4 pl-1 pb-1 max-h-56 overflow-y-auto">
                 {REGIONS.map((region) => (
-                  <Link
+                  <a
                     key={region.id}
-                    to={region.slug}
+                    href={region.slug}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="block rounded-md px-3 py-1.5 text-sm text-muted-foreground hover:bg-secondary hover:text-primary"
                   >
                     {region.name}
-                  </Link>
+                  </a>
                 ))}
               </div>
             )}
 
-            <Link
-              to="/preise"
+            <a
+              href="/preise"
               onClick={() => setIsMobileMenuOpen(false)}
               className="block rounded-md px-3 py-2 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary"
             >
               Preise
-            </Link>
-            <Link
-              to="/blog"
+            </a>
+            <a
+              href="/blog"
               onClick={() => setIsMobileMenuOpen(false)}
               className="block rounded-md px-3 py-2 text-sm font-semibold text-foreground hover:bg-secondary hover:text-primary"
             >
               Ratgeber
-            </Link>
+            </a>
             <div className="flex gap-2 pt-2">
               <a href={`tel:${COMPANY_INFO.phoneLink}`} className="flex-1" aria-label={`Anrufen: ${COMPANY_INFO.phone}`}>
                 <Button variant="outline" size="sm" className="w-full gap-2">

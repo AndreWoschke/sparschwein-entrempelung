@@ -1,6 +1,12 @@
 ---
 import "../index.css";
 import { COMPANY_INFO } from "@/lib/seo";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { WhatsAppButton } from "@/components/ui/whatsapp-button";
+import { MobileCallBar } from "@/components/ui/mobile-call-bar";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import { CookieBanner } from "@/components/ui/cookie-banner";
 
 interface Props {
   title: string;
@@ -61,14 +67,19 @@ const ogImage = new URL("/og-image.jpg", Astro.site).href;
     }
   </head>
   <body>
-    <!--
-      Phase-1 Platzhalter-Shell. Header/Footer + Floating-UI kommen in Phase 2
-      als native .astro-Komponenten bzw. minimale React-Islands.
-    -->
     <div class="flex min-h-screen flex-col">
-      <main id="main-content" role="main" class="flex-1">
+      <Header client:load />
+      {/* Header ist fixed → Offset via Padding, wie in der alten Layout-Komponente */}
+      <main id="main-content" role="main" class="flex-1 pt-16 pb-14 md:pb-0 lg:pt-20">
         <slot />
       </main>
+      <Footer />
+
+      {/* Floating-UI: nur clientseitig (Scroll-/localStorage-Logik), wie zuvor verzögert */}
+      <WhatsAppButton client:only="react" />
+      <MobileCallBar client:only="react" />
+      <ScrollToTop client:only="react" />
+      <CookieBanner client:only="react" />
     </div>
   </body>
 </html>
