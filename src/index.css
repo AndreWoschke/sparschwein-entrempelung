@@ -1,0 +1,343 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sparschwein Entrümpelung Design System
+   Blau/Professionell mit Orange-Akzenten
+   Alle Farben in HSL
+*/
+
+@layer base {
+  :root {
+    /* Hintergrund & Vordergrund */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    /* Karten */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Primärfarbe: Tiefblau */
+    --primary: 213 56% 24%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Sekundärfarbe: Helleres Blau */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 213 56% 24%;
+
+    /* Muted - WCAG AA contrast optimized */
+    --muted: 210 20% 96%;
+    --muted-foreground: 215 20% 40%;
+
+    /* Akzentfarbe: Warmes Orange für CTAs */
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders & Input */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 213 56% 24%;
+
+    /* Radius */
+    --radius: 0.75rem;
+
+    /* Zusätzliche Custom Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 213 56% 24%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 213 56% 24%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 213 56% 24%;
+  }
+
+  .dark {
+    --background: 215 25% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 25% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 25% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 213 56% 24%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted - WCAG AA contrast optimized for dark mode */
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 72%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 212 27% 84%;
+
+    --sidebar-background: 215 25% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 40% 98%;
+    --sidebar-primary-foreground: 213 56% 24%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 213 56% 24%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* CTA Button with Glow Effect */
+  .btn-cta {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 font-semibold text-accent-foreground transition-all duration-300;
+    box-shadow: 0 4px 14px 0 hsl(var(--accent) / 0.4);
+  }
+  
+  .btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px 0 hsl(var(--accent) / 0.5);
+  }
+
+  /* Secondary CTA */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border-2 border-primary bg-transparent px-6 py-3 font-semibold text-primary transition-all duration-300;
+  }
+  
+  .btn-secondary:hover {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  /* Card with hover effect */
+  .card-hover {
+    @apply rounded-xl border bg-card p-6 shadow-sm transition-all duration-300;
+  }
+  
+  .card-hover:hover {
+    @apply shadow-lg;
+    transform: translateY(-4px);
+  }
+
+  /* Section container */
+  .section-container {
+    @apply mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24;
+  }
+
+  /* Section title */
+  .section-title {
+    @apply text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl;
+  }
+
+  /* Section subtitle */
+  .section-subtitle {
+    @apply mt-4 text-lg text-muted-foreground sm:text-xl;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  /* Optimized floating animation - reduced motion for performance */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+    will-change: transform;
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-float {
+      animation: none;
+    }
+    .animate-fade-in-up {
+      animation: none;
+      opacity: 1;
+    }
+  }
+
+  /* Fade in animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  /* Stagger animations */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+}
+
+@layer utilities {
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Mobile-First Typography Adjustments for Long German Keywords */
+@layer base {
+  /* Prevent horizontal overflow on mobile */
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* Safe word wrapping - no hard breaks */
+  h1, h2, h3, h4, h5, h6, p, span, a, li, strong, em {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+}
+
+@layer components {
+  /* Mobile-only font scaling for keyword-heavy elements */
+  @media (max-width: 430px) {
+    /* Hero H1 - slightly smaller on mobile */
+    .section-container h1,
+    section h1 {
+      font-size: clamp(1.75rem, 7vw, 2.25rem);
+      line-height: 1.2;
+    }
+
+    /* Section titles (H2) - slightly smaller */
+    .section-title,
+    .section-container h2,
+    section h2 {
+      font-size: clamp(1.5rem, 6vw, 1.875rem);
+      line-height: 1.25;
+    }
+
+    /* Card titles (H3) */
+    .section-container h3,
+    section h3 {
+      font-size: clamp(1rem, 4.5vw, 1.25rem);
+      line-height: 1.3;
+    }
+
+    /* Badges and small text elements */
+    .section-container span,
+    .rounded-full {
+      font-size: clamp(0.75rem, 3.5vw, 0.875rem);
+    }
+
+    /* Trust badges in hero - prevent overflow */
+    .flex-wrap > span {
+      max-width: calc(50% - 0.375rem);
+      text-align: center;
+    }
+
+    /* Anti-Vermittler statement - wrap nicely */
+    .inline-flex.items-center.gap-2.rounded-lg {
+      text-align: left;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
+
+    /* Statistics grid text */
+    .grid-cols-2 > div .text-2xl,
+    .grid-cols-2 > div .text-3xl {
+      font-size: clamp(1.25rem, 5vw, 1.5rem);
+    }
+
+    /* Description text */
+    .section-subtitle,
+    .text-lg {
+      font-size: clamp(0.9375rem, 4vw, 1.125rem);
+    }
+
+    /* Button text */
+    .btn-cta,
+    button {
+      font-size: clamp(0.875rem, 3.5vw, 1rem);
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  /* Extra small screens (360px) */
+  @media (max-width: 375px) {
+    .section-container h1,
+    section h1 {
+      font-size: clamp(1.5rem, 8vw, 1.875rem);
+    }
+
+    .section-title,
+    .section-container h2,
+    section h2 {
+      font-size: clamp(1.25rem, 7vw, 1.5rem);
+    }
+
+    /* Ensure CTAs don't overflow */
+    .flex-col.items-center.gap-4 a,
+    .flex-col.items-center.gap-4 button {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}

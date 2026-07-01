@@ -1,0 +1,44 @@
+# Cache-Control Headers für statische Assets
+# Diese Datei wird von Netlify/Vercel/Cloudflare Pages automatisch gelesen
+
+# Alle statischen Assets im /assets Ordner (Vite generiert diese mit Hash)
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# JavaScript Dateien
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+  
+# CSS Dateien  
+/assets/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Bilder
+/assets/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Fonts
+/*.woff2
+  Cache-Control: public, max-age=31536000, immutable
+
+# Favicon und Icons
+/favicon.ico
+  Cache-Control: public, max-age=604800
+
+/favicon.png
+  Cache-Control: public, max-age=604800
+
+# Sitemaps (kürzerer Cache da sie sich ändern können)
+/sitemap*.xml
+  Cache-Control: public, max-age=86400
+
+# robots.txt
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+# HTML Seiten - kein/kurzer Cache für dynamische Inhalte
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/
+  Cache-Control: public, max-age=0, must-revalidate

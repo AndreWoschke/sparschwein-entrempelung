@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Haupt-Sitemap Index -->
+  <!-- Stand: Januar 2026 -->
+  
+  <sitemap>
+    <loc>https://sparschwein-entruempelung.de/sitemap-pages.xml</loc>
+    <lastmod>2026-05-13</lastmod>
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://sparschwein-entruempelung.de/sitemap-services.xml</loc>
+    <lastmod>2026-05-13</lastmod>
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://sparschwein-entruempelung.de/sitemap-locations.xml</loc>
+    <lastmod>2026-05-13</lastmod>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://sparschwein-entruempelung.de/sitemap-blog.xml</loc>
+    <lastmod>2026-05-14</lastmod>
+  </sitemap>
+</sitemapindex>
