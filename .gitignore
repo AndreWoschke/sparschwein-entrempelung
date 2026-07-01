@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Astro
+.astro/
+
 # Environment variables (secrets)
 .env
 .env.*

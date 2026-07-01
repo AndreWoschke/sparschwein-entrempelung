@@ -1,0 +1,74 @@
+---
+import "../index.css";
+import { COMPANY_INFO } from "@/lib/seo";
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  robots?: string;
+  jsonLd?: unknown[];
+}
+
+const {
+  title,
+  description,
+  canonicalPath = Astro.url.pathname,
+  robots = "index, follow",
+  jsonLd = [],
+} = Astro.props;
+
+const canonical = new URL(canonicalPath, Astro.site).href;
+const ogImage = new URL("/og-image.jpg", Astro.site).href;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={COMPANY_INFO.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+
+    <!-- Structured data (JSON-LD) -->
+    {
+      jsonLd.map((schema) => (
+        <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+      ))
+    }
+  </head>
+  <body>
+    <!--
+      Phase-1 Platzhalter-Shell. Header/Footer + Floating-UI kommen in Phase 2
+      als native .astro-Komponenten bzw. minimale React-Islands.
+    -->
+    <div class="flex min-h-screen flex-col">
+      <main id="main-content" role="main" class="flex-1">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
