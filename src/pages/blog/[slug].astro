@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogPostPage from "@/react-app/pages/BlogPostPage";
+import { getPublishedPosts } from "@/lib/blog";
+
+export function getStaticPaths() {
+  return getPublishedPosts().map((post) => ({
+    params: { slug: post.slug },
+    props: { slug: post.slug, title: post.metaTitle, description: post.metaDescription },
+  }));
+}
+
+const { slug, title, description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} canonicalPath={`/blog/${slug}`}>
+  <BlogPostPage slug={slug} client:load />
+</BaseLayout>

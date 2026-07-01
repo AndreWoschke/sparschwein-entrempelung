@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogIndexPage from "@/react-app/pages/BlogIndexPage";
+---
+
+<BaseLayout
+  title="Ratgeber & Blog | Sparschwein Entrümpelung Havelland"
+  description="Ratgeber rund um Entrümpelung, Haushaltsauflösung und Preise im Havelland. Ehrliche Tipps von Ihrem Direktanbieter aus Brieselang."
+  canonicalPath="/blog"
+>
+  <BlogIndexPage client:load />
+</BaseLayout>

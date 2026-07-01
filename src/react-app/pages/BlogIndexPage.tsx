@@ -1,7 +1,4 @@
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
-import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Button } from "@/components/ui/button";
@@ -35,20 +32,10 @@ export default function BlogIndexPage() {
   };
 
   return (
-    <Layout>
-      <Helmet>
-        <title>Ratgeber & Blog | Sparschwein Entrümpelung Havelland</title>
-        <meta
-          name="description"
-          content="Ratgeber rund um Entrümpelung, Haushaltsauflösung und Preise im Havelland. Ehrliche Tipps von Ihrem Direktanbieter aus Brieselang."
-        />
-        <link rel="canonical" href={canonical} />
-        <meta property="og:title" content="Ratgeber & Blog | Sparschwein Entrümpelung" />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:type" content="website" />
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(blogListSchema)}</script>
-      </Helmet>
+    <>
+      {/* JSON-LD im Body; <head>-Meta liefert das Astro-Layout (blog.astro) */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogListSchema) }} />
 
 
       {/* Hero */}
@@ -73,7 +60,7 @@ export default function BlogIndexPage() {
         <SectionHeader badge="Aktuelle Artikel" title="Alle Beiträge" />
         <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {getPublishedPosts().map((post) => (
-            <Link key={post.slug} to={`/blog/${post.slug}`} className="group">
+            <a key={post.slug} href={`/blog/${post.slug}`} className="group">
               <Card className="card-hover h-full">
                 <CardContent className="flex h-full flex-col p-6">
                   <span className="mb-3 inline-block w-fit rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
@@ -104,7 +91,7 @@ export default function BlogIndexPage() {
                   </span>
                 </CardContent>
               </Card>
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -119,6 +106,6 @@ export default function BlogIndexPage() {
         title="Persönliche Beratung gewünscht?"
         description="Kostenlose Besichtigung, verbindlicher Festpreis – im gesamten Havelland."
       />
-    </Layout>
+    </>
   );
 }

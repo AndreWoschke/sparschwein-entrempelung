@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import {
   Phone,
   MessageCircle,
@@ -24,7 +23,6 @@ import {
   ThumbsUp,
   BadgeCheck,
 } from "lucide-react";
-import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SectionHeader } from "@/components/ui/section-header";
@@ -161,38 +159,15 @@ export default function HomePage() {
   ]);
 
   return (
-    <Layout>
-      <Helmet>
-        <title>Entrümpelung Brieselang & Havelland | Sparschwein</title>
-        <meta name="description" content="Professionelle Entrümpelung in Brieselang, Falkensee & Havelland. Festpreisgarantie, kostenlose Besichtigung, besenreine Übergabe. Seit 2015. ☎ 01579 2639408" />
-        <link rel="canonical" href="https://sparschwein-entruempelung.de/" />
-        <meta property="og:title" content="Entrümpelung Brieselang & Havelland | Sparschwein" />
-        <meta property="og:description" content="Festpreis-Entrümpelung im Havelland: kostenlose Besichtigung, eigenes Team, besenreine Übergabe. Seit 2015." />
-        <meta property="og:url" content="https://sparschwein-entruempelung.de/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://sparschwein-entruempelung.de/og-image.jpg" />
-        <script type="application/ld+json">
-          {JSON.stringify(localBusinessSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(serviceSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(organizationSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(reviewSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(websiteSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
-      </Helmet>
+    <>
+      {/* JSON-LD im Body; <head>-Meta liefert das Astro-Layout (index.astro) */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Hero Section mit Inhaber & Anti-Vermittler */}
       <section aria-labelledby="hero-heading" className="relative overflow-hidden bg-gradient-to-br from-primary to-primary/80 py-20 text-primary-foreground lg:py-32">
@@ -425,7 +400,7 @@ export default function HomePage() {
             {SERVICES.map((service) => {
               const Icon = iconMap[service.icon] || Package;
               return (
-                <Link key={service.id} to={service.slug}>
+                <a key={service.id} href={service.slug}>
                   <Card className="card-hover h-full">
                     <CardContent className="p-6">
                       <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
@@ -440,7 +415,7 @@ export default function HomePage() {
                       </span>
                     </CardContent>
                   </Card>
-                </Link>
+                </a>
               );
             })}
           </div>
@@ -496,12 +471,12 @@ export default function HomePage() {
           ))}
         </div>
         <div className="mt-8 text-center">
-          <Link to="/preise">
+          <a href="/preise">
             <Button variant="outline" size="lg" className="gap-2">
               Mehr zu unseren Preisen
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Button>
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -585,9 +560,9 @@ export default function HomePage() {
                 </h3>
                 <div className="flex flex-wrap justify-center gap-3">
                   {REGIONS.map((region) => (
-                    <Link 
+                    <a 
                       key={region.id} 
-                      to={region.slug}
+                      href={region.slug}
                       className={`inline-flex items-center gap-2 rounded-lg border bg-background px-4 py-2.5 text-sm font-medium transition-all hover:border-primary hover:bg-primary/5 hover:text-primary ${
                         region.isHeadquarters 
                           ? "border-primary text-primary" 
@@ -596,7 +571,7 @@ export default function HomePage() {
                     >
                       <MapPin className="h-4 w-4" aria-hidden="true" />
                       {region.name}
-                    </Link>
+                    </a>
                   ))}
                 </div>
                 <p className="mt-5 text-center text-sm text-muted-foreground">
@@ -783,6 +758,6 @@ export default function HomePage() {
           description="Über 500 zufriedene Kunden vertrauen uns. Kontaktieren Sie uns für ein kostenloses Angebot."
         />
       </div>
-    </Layout>
+    </>
   );
 }

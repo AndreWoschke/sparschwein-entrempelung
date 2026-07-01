@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PreisePage from "@/react-app/pages/PreisePage";
+---
+
+<BaseLayout
+  title="Preise | Sparschwein Entrümpelung – Faire Festpreise"
+  description="Transparente Preise für Entrümpelung in Brieselang & Havelland. Festpreisgarantie, kostenlose Besichtigung. Ab 79€ – jetzt unverbindlich anfragen!"
+  canonicalPath="/preise"
+>
+  {/* client:load – enthaelt den interaktiven Entruempelungs-Rechner */}
+  <PreisePage client:load />
+</BaseLayout>

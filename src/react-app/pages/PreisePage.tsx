@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import {
   Phone,
   MessageCircle,
@@ -15,7 +14,6 @@ import {
   Trash2,
   Recycle,
 } from "lucide-react";
-import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { COMPANY_INFO, REVIEWS, FAQ_ITEMS, generateBreadcrumbSchema, generateLocalBusinessSchema, generateFAQSchema, generateReviewSchema } from "@/lib/seo";
@@ -161,19 +159,12 @@ export default function PreisePage() {
   const reviewSchema = generateReviewSchema(REVIEWS);
 
   return (
-    <Layout>
-      <Helmet>
-        <title>Preise | Sparschwein Entrümpelung – Faire Festpreise</title>
-        <meta
-          name="description"
-          content="Transparente Preise für Entrümpelung in Brieselang & Havelland. Festpreisgarantie, kostenlose Besichtigung. Ab 79€ – jetzt unverbindlich anfragen!"
-        />
-        <link rel="canonical" href={`${COMPANY_INFO.website}/preise`} />
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(reviewSchema)}</script>
-      </Helmet>
+    <>
+      {/* JSON-LD im Body; <head>-Meta liefert das Astro-Layout (preise.astro) */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary to-primary/80 py-16 text-primary-foreground lg:py-24">
@@ -373,6 +364,6 @@ export default function PreisePage() {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 }

@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import DatenschutzPage from "@/react-app/pages/DatenschutzPage";
+---
+
+<BaseLayout
+  title="Datenschutzerklärung | Sparschwein Entrümpelung"
+  description="Datenschutzerklärung der Sparschwein Entrümpelung – Informationen zur Verarbeitung personenbezogener Daten nach DSGVO."
+  robots="noindex, follow"
+>
+  {/* Rein statisch, kein Client-JS (keine Interaktivität) */}
+  <DatenschutzPage />
+</BaseLayout>

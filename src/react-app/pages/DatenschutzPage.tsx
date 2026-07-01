@@ -1,15 +1,8 @@
-import { Helmet } from "react-helmet-async";
-import { Layout } from "@/components/layout/Layout";
 import { COMPANY_INFO } from "@/lib/seo";
 
 export default function DatenschutzPage() {
   return (
-    <Layout>
-      <Helmet>
-        <title>Datenschutzerklärung | Sparschwein Entrümpelung</title>
-        <meta name="description" content="Datenschutzerklärung der Sparschwein Entrümpelung – Informationen zur Verarbeitung Ihrer personenbezogenen Daten gemäß DSGVO." />
-        <meta name="robots" content="noindex, follow" />
-      </Helmet>
+    <>
 
       <div className="section-container py-12 lg:py-16">
         <div className="mx-auto max-w-3xl">
@@ -570,6 +563,6 @@ export default function DatenschutzPage() {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   );
 }
