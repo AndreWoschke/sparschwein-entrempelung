@@ -64,8 +64,8 @@ export const SERVICES = [
     longDescription: "Komplette Wohnungsentrümpelung von der 1-Zimmer-Wohnung bis zur großen Altbauwohnung. Wir übernehmen alles: Möbel abbauen, Hausrat entsorgen, besenrein übergeben.",
     icon: "Home",
     slug: "/wohnungsentruempelung",
-    metaTitle: "Wohnungsentrümpelung | Festpreis & besenreine Übergabe",
-    metaDescription: "Professionelle Wohnungsentrümpelung zum Festpreis. Kostenlose Besichtigung, besenreine Übergabe, fachgerechte Entsorgung. ☎ 01579 2639408",
+    metaTitle: "Wohnungsentrümpelung Havelland ab 299 € | Festpreis & besenrein",
+    metaDescription: "Wohnungsentrümpelung im Havelland zum Festpreis ab 299 €: 1–4-Zimmer-Wohnung inkl. Möbel, Hausrat & Elektro – besenreine Übergabe, Termin in 24–48 h. ☎ 01579 2639408",
   },
   {
     id: "hausentruempelung",

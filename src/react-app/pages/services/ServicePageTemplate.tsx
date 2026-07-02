@@ -72,6 +72,8 @@ interface ServicePageProps {
   situations: { title: string; description: string }[];
   processSteps: { step: number; title: string; description: string }[];
   priceFactors: string[];
+  // Optionaler H1-Override (SEO): sonst wird service.title verwendet
+  h1?: string;
   // NEU: Erweiterte Content-Sektionen
   detailedDescription?: string;
   disposalInfo?: string;
@@ -90,6 +92,7 @@ export function ServicePageTemplate({
   situations,
   processSteps,
   priceFactors,
+  h1,
   detailedDescription,
   disposalInfo,
   targetGroups,
@@ -159,7 +162,7 @@ export function ServicePageTemplate({
             </div>
 
             <h1 className="mb-4 text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
-              {service.title}
+              {h1 || service.title}
             </h1>
 
             <p className="mx-auto mb-6 max-w-2xl text-lg text-primary-foreground/90">
@@ -470,7 +473,7 @@ export function ServicePageTemplate({
                   <a key={region.id} href={region.slug}>
                     <Button variant="outline" size="sm" className="gap-2 hover:border-primary hover:bg-primary/5">
                       <MapPin className="h-4 w-4 text-primary" />
-                      {region.name}
+                      Entrümpelung {region.name}
                     </Button>
                   </a>
                 ))}

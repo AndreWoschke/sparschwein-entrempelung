@@ -558,19 +558,25 @@ export default function HomePage() {
                 <h3 className="mb-4 text-center text-lg font-semibold">
                   Direkt zu Ihrem Ort:
                 </h3>
+                <p className="mx-auto mb-5 max-w-xl text-center text-sm text-muted-foreground">
+                  Besonders häufig im Einsatz sind wir bei der{" "}
+                  <a href="/entruempelung-brieselang" className="font-medium text-primary underline-offset-2 hover:underline">Entrümpelung Brieselang</a>,{" "}
+                  <a href="/entruempelung-falkensee" className="font-medium text-primary underline-offset-2 hover:underline">Entrümpelung Falkensee</a>{" "}
+                  und der <a href="/entruempelung-nauen" className="font-medium text-primary underline-offset-2 hover:underline">Entrümpelung Nauen</a>.
+                </p>
                 <div className="flex flex-wrap justify-center gap-3">
                   {REGIONS.map((region) => (
-                    <a 
-                      key={region.id} 
+                    <a
+                      key={region.id}
                       href={region.slug}
                       className={`inline-flex items-center gap-2 rounded-lg border bg-background px-4 py-2.5 text-sm font-medium transition-all hover:border-primary hover:bg-primary/5 hover:text-primary ${
-                        region.isHeadquarters 
-                          ? "border-primary text-primary" 
+                        region.isHeadquarters
+                          ? "border-primary text-primary"
                           : "border-border text-foreground"
                       }`}
                     >
                       <MapPin className="h-4 w-4" aria-hidden="true" />
-                      {region.name}
+                      Entrümpelung {region.name}
                     </a>
                   ))}
                 </div>

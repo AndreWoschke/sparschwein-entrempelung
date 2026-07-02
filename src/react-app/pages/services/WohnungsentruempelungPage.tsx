@@ -9,6 +9,7 @@ const introParagraphs = [
   "Wenn eine Wohnung übergeben werden muss, zählt jede Stunde. Wir räumen 1- bis 4-Zimmer-Wohnungen in 4–8 Stunden komplett – Möbel, Hausrat, Elektrogeräte, Teppiche.",
   "Übergabe an Vermieter oder Käufer: besenrein, ohne Nacharbeiten. Wir kommen mit eigener Crew (2–4 Personen) und eigenem Transporter.",
   "Sie bekommen einen festen Ansprechpartner vom Anruf bis zur Schlüsselübergabe – ohne Vermittlung, ohne Subunternehmer.",
+  "Ob in Falkensee, Nauen, Brieselang oder im übrigen Havelland: Ihre Wohnungsentrümpelung führen wir zum Festpreis ab 299 € durch – ohne Anfahrtskosten, mit Termin meist innerhalb 24–48 Stunden.",
 ];
 
 const detailedDescription = `Eine Wohnungsentrümpelung umfasst das vollständige Leerräumen einer Wohnung inklusive Demontage, Abtransport und Entsorgung. Im Unterschied zum Umzugsunternehmen tragen wir nichts ins neue Zuhause, sondern in den Container – fachgerecht getrennt nach Sperrmüll, Elektroschrott und Sondermüll.
@@ -117,6 +118,18 @@ const faqs = [
     question: "Räumen Sie auch Messie-Wohnungen?",
     answer: "Ja. Wir arbeiten mit Schutzkleidung und ohne Wertung. Die Anfrage bleibt vertraulich, auf Wunsch mit neutralem Fahrzeug.",
   },
+  {
+    question: "Was kostet eine Wohnungsentrümpelung pro Quadratmeter?",
+    answer: "Wir rechnen nicht pauschal pro m², sondern nach Volumen, Etage und Aufwand – das ist für Sie meist günstiger. Als Orientierung: Eine 60-m²-Wohnung liegt üblicherweise zwischen 400 und 800 €. Den verbindlichen Festpreis nennen wir nach der kostenlosen Besichtigung.",
+  },
+  {
+    question: "Bieten Sie Wohnungsentrümpelung mit Wertanrechnung an?",
+    answer: "Ja. Gut erhaltene Möbel, Elektrogeräte oder Sammlerstücke rechnen wir an und ziehen den Wert vom Festpreis ab. So wird Ihre Wohnungsentrümpelung teils deutlich günstiger.",
+  },
+  {
+    question: "Entrümpeln Sie Wohnungen im gesamten Havelland?",
+    answer: "Ja – von Brieselang und Falkensee über Nauen und Wustermark bis ins westliche Havelland. Innerhalb unseres Einsatzgebiets berechnen wir keine Anfahrtskosten, weder zur Besichtigung noch zur Räumung.",
+  },
   ...FAQ_ITEMS.slice(0, 2),
 ];
 
@@ -124,6 +137,7 @@ export default function WohnungsentruempelungPage() {
   return (
     <ServicePageTemplate
       service={service}
+      h1="Wohnungsentrümpelung im Havelland – Festpreis & besenrein"
       faqs={faqs}
       situations={situations}
       processSteps={processSteps}
