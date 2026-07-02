@@ -5,7 +5,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { AuthProvider } from "@/hooks/useAuth";
 
 // Critical: HomePage loaded eagerly for LCP
 import HomePage from "./pages/HomePage";
@@ -48,17 +47,6 @@ const WerderPage = lazy(() => import("./pages/locations/WerderPage"));
 const StaakenPage = lazy(() => import("./pages/locations/StaakenPage"));
 const BrandenburgHavelPage = lazy(() => import("./pages/locations/BrandenburgHavelPage"));
 
-// Admin Pages
-const LoginPage = lazy(() => import("./pages/admin/LoginPage"));
-const AdminLayout = lazy(() => import("./pages/admin/AdminLayout"));
-const AdminDashboard = lazy(() => import("./pages/admin/AdminDashboard"));
-const OfferCreate = lazy(() => import("./pages/admin/OfferCreate"));
-const OfferHistory = lazy(() => import("./pages/admin/OfferHistory"));
-const AdminSettings = lazy(() => import("./pages/admin/AdminSettings"));
-const TeamManagement = lazy(() => import("./pages/admin/TeamManagement"));
-const PerformancePage = lazy(() => import("./pages/admin/PerformancePage"));
-const SeoPage = lazy(() => import("./pages/admin/SeoPage"));
-
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -85,9 +73,8 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <AuthProvider>
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/preise" element={<PreisePage />} />
                 <Route path="/blog" element={<BlogIndexPage />} />
@@ -124,25 +111,10 @@ const App = () => (
                 <Route path="/entruempelung-werder" element={<WerderPage />} />
                 <Route path="/entruempelung-staaken" element={<StaakenPage />} />
                 <Route path="/entruempelung-brandenburg-havel" element={<BrandenburgHavelPage />} />
-                
-                {/* Admin Login */}
-                <Route path="/admin/login" element={<LoginPage />} />
-                
-                {/* Admin-Bereich (geschützt) */}
-                <Route path="/admin" element={<AdminLayout />}>
-                  <Route index element={<AdminDashboard />} />
-                  <Route path="angebot" element={<OfferCreate />} />
-                  <Route path="verlauf" element={<OfferHistory />} />
-                  <Route path="einstellungen" element={<AdminSettings />} />
-                  <Route path="team" element={<TeamManagement />} />
-                  <Route path="performance" element={<PerformancePage />} />
-                  <Route path="seo" element={<SeoPage />} />
-                </Route>
 
                 <Route path="*" element={<NotFound />} />
               </Routes>
-            </Suspense>
-          </AuthProvider>
+          </Suspense>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

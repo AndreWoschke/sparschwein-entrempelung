@@ -15,7 +15,6 @@ export default defineConfig({
     sitemap({
       // noindex-Seiten aus der Sitemap ausschliessen
       filter: (page) =>
-        !page.includes("/admin") &&
         !page.includes("/impressum") &&
         !page.includes("/datenschutz") &&
         !page.includes("/404"),

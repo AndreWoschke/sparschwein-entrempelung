@@ -6,8 +6,6 @@ Allow: /
 
 # Technische Pfade blockieren
 Disallow: /api/
-Disallow: /admin
-Disallow: /admin/
 Disallow: /*.json$
 Disallow: /node_modules/
 Disallow: /.git/
@@ -16,8 +14,6 @@ Disallow: /.git/
 User-agent: Googlebot
 Allow: /
 Disallow: /api/
-Disallow: /admin
-Disallow: /admin/
 
 # Bing spezifisch (Crawl-delay verlangsamt nur Bing, nicht Google)
 User-agent: Bingbot
