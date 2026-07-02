@@ -209,18 +209,6 @@ export const REGIONS = [
     postalCodes: ["14641"],
   },
   {
-    id: "staaken",
-    name: "Staaken",
-    slug: "/entruempelung-staaken",
-    isHeadquarters: false,
-    description: "Berlin-Spandau direkt an unserer Türschwelle – kurze Anfahrt.",
-    longDescription: "Staaken grenzt unmittelbar an Dallgow-Döberitz und ist von unserem Standort Brieselang in rund 15 Minuten erreichbar. Wir räumen hier regelmäßig Wohnungen, Keller und Häuser – sowohl im Berliner als auch im Brandenburger Teil.",
-    metaTitle: "Entrümpelung Staaken (Berlin-Spandau) ab 299 € · Termin in 24 h",
-    metaDescription: "Entrümpelung Staaken vom Anbieter direkt nebenan: Festpreis ab 299 €, 15 Min. Anfahrt aus Brieselang, eigenes Team, besenreine Übergabe. ☎ 01579 2639408",
-    distance: "ca. 15 Min.",
-    postalCodes: ["13591", "13593"],
-  },
-  {
     id: "rathenow",
     name: "Rathenow",
     slug: "/entruempelung-rathenow",
@@ -351,18 +339,6 @@ export const REGIONS = [
     metaDescription: "Entrümpelung im Landkreis Havelland zum Festpreis ab 299 €. Eigenes Team, schnelle Termine, besenreine Übergabe. ☎ 01579 2639408",
     distance: "bis 50 km",
     postalCodes: [],
-  },
-  {
-    id: "brandenburg-havel",
-    name: "Brandenburg an der Havel",
-    slug: "/entruempelung-brandenburg-havel",
-    isHeadquarters: false,
-    description: "Kreisfreie Stadt an der Havel – regelmäßige Einsätze.",
-    longDescription: "Brandenburg an der Havel erreichen wir aus Brieselang in rund 40 Minuten. In der drittgrößten Stadt Brandenburgs führen wir regelmäßig Wohnungs- und Haushaltsauflösungen durch – von Plattenbauwohnungen am Quenz bis zu Altbauten in der Neustadt.",
-    metaTitle: "Entrümpelung Brandenburg an der Havel ab 299 € · 24 h Termin",
-    metaDescription: "Entrümpelung Brandenburg an der Havel zum Festpreis ab 299 €. Wohnung, Haus, Keller – eigenes Team, besenreine Übergabe. ☎ 01579 2639408",
-    distance: "ca. 40 Min.",
-    postalCodes: ["14770", "14772", "14774", "14776"],
   },
 ];
 
@@ -1149,24 +1125,6 @@ export function generateMetaTags(page: {
     },
   };
 }
-
-// Internal Linking Strategy Helper
-export const INTERNAL_LINKS = {
-  // Service -> Location links (max 3 per service)
-  serviceToLocations: (serviceSlug: string) => {
-    const priorityLocations = REGIONS.filter(r => r.isHeadquarters || ["falkensee", "nauen"].includes(r.id));
-    return priorityLocations.slice(0, 3);
-  },
-  
-  // Location -> Service links (all services)
-  locationToServices: () => SERVICES,
-  
-  // Homepage -> Top pages
-  homepageLinks: {
-    services: SERVICES.slice(0, 4),
-    locations: REGIONS.filter(r => r.isHeadquarters || r.id === "falkensee" || r.id === "havelland"),
-  },
-};
 
 // Core Web Vitals & Technical SEO Checklist
 export const TECHNICAL_SEO_REQUIREMENTS = {

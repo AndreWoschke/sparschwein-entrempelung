@@ -27,26 +27,6 @@ const GewerbeentruempelungPage = lazy(() => import("./pages/services/Gewerbeentr
 const SchrottabholungPage = lazy(() => import("./pages/services/SchrottabholungPage"));
 const ContainerdienstPage = lazy(() => import("./pages/services/ContainerdienstPage"));
 
-// Location Pages
-const BrieselangPage = lazy(() => import("./pages/locations/BrieselangPage"));
-const FalkenseePage = lazy(() => import("./pages/locations/FalkenseePage"));
-const DallgowPage = lazy(() => import("./pages/locations/DallgowPage"));
-const NauenPage = lazy(() => import("./pages/locations/NauenPage"));
-const WustermarkPage = lazy(() => import("./pages/locations/WustermarkPage"));
-const HavellandPage = lazy(() => import("./pages/locations/HavellandPage"));
-const RathenowPage = lazy(() => import("./pages/locations/RathenowPage"));
-const PremnitzPage = lazy(() => import("./pages/locations/PremnitzPage"));
-const FriesackPage = lazy(() => import("./pages/locations/FriesackPage"));
-const SchoenwaldeGlienPage = lazy(() => import("./pages/locations/SchoenwaldeGlienPage"));
-const KetzinPage = lazy(() => import("./pages/locations/KetzinPage"));
-const PaulinenauePage = lazy(() => import("./pages/locations/PaulinenauePage"));
-const HennigsdorfPage = lazy(() => import("./pages/locations/HennigsdorfPage"));
-const VeltenPage = lazy(() => import("./pages/locations/VeltenPage"));
-const OranienburgPage = lazy(() => import("./pages/locations/OranienburgPage"));
-const WerderPage = lazy(() => import("./pages/locations/WerderPage"));
-const StaakenPage = lazy(() => import("./pages/locations/StaakenPage"));
-const BrandenburgHavelPage = lazy(() => import("./pages/locations/BrandenburgHavelPage"));
-
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -91,26 +71,6 @@ const App = () => (
                 <Route path="/firmen-gewerbeentruempelung" element={<GewerbeentruempelungPage />} />
                 <Route path="/schrottabholung" element={<SchrottabholungPage />} />
                 <Route path="/containerdienst-brieselang" element={<ContainerdienstPage />} />
-                
-                {/* Ortsseiten */}
-                <Route path="/entruempelung-brieselang" element={<BrieselangPage />} />
-                <Route path="/entruempelung-falkensee" element={<FalkenseePage />} />
-                <Route path="/entruempelung-dallgow-doeberitz" element={<DallgowPage />} />
-                <Route path="/entruempelung-nauen" element={<NauenPage />} />
-                <Route path="/entruempelung-wustermark" element={<WustermarkPage />} />
-                <Route path="/entruempelung-havelland" element={<HavellandPage />} />
-                <Route path="/entruempelung-rathenow" element={<RathenowPage />} />
-                <Route path="/entruempelung-premnitz" element={<PremnitzPage />} />
-                <Route path="/entruempelung-friesack" element={<FriesackPage />} />
-                <Route path="/entruempelung-schoenwalde-glien" element={<SchoenwaldeGlienPage />} />
-                <Route path="/entruempelung-ketzin" element={<KetzinPage />} />
-                <Route path="/entruempelung-paulinenaue" element={<PaulinenauePage />} />
-                <Route path="/entruempelung-hennigsdorf" element={<HennigsdorfPage />} />
-                <Route path="/entruempelung-velten" element={<VeltenPage />} />
-                <Route path="/entruempelung-oranienburg" element={<OranienburgPage />} />
-                <Route path="/entruempelung-werder" element={<WerderPage />} />
-                <Route path="/entruempelung-staaken" element={<StaakenPage />} />
-                <Route path="/entruempelung-brandenburg-havel" element={<BrandenburgHavelPage />} />
 
                 <Route path="*" element={<NotFound />} />
               </Routes>
