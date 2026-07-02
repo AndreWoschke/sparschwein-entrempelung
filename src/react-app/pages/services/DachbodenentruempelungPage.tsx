@@ -78,7 +78,7 @@ const faqs = [
   },
   {
     question: "Was kostet eine Dachbodenentrümpelung?",
-    answer: "Ab 149 €. Ein durchschnittlicher Dachboden liegt typischerweise bei 200–600 €, je nach Volumen und Zugang. Festpreis nach Besichtigung.",
+    answer: "Ab 99 €. Ein durchschnittlicher Dachboden liegt typischerweise bei 200–600 €, je nach Volumen und Zugang. Festpreis nach Besichtigung.",
   },
   {
     question: "Wie lange dauert eine Dachbodenentrümpelung?",

@@ -24,7 +24,7 @@ const services = [
     id: "wohnungsaufloesung",
     title: "Wohnungsentrümpelung",
     icon: Home,
-    priceRange: "ab 299 €",
+    priceRange: "ab 99 €",
     description: "Komplette Räumung einer Wohnung inkl. aller Möbel, Hausrat und Gegenstände.",
     includes: [
       "Demontage von Möbeln",
@@ -50,7 +50,7 @@ const services = [
     id: "kellerentruempelung",
     title: "Kellerentrümpelung",
     icon: Warehouse,
-    priceRange: "ab 149 €",
+    priceRange: "ab 99 €",
     description: "Professionelle Räumung von Kellerräumen – auch bei schwierigen Zugängen.",
     includes: [
       "Räumung aller Kellerräume",
@@ -63,7 +63,7 @@ const services = [
     id: "dachbodenentruempelung",
     title: "Dachbodenentrümpelung",
     icon: Layers,
-    priceRange: "ab 149 €",
+    priceRange: "ab 99 €",
     description: "Entrümpelung von Dachböden und Speichern – sicher und gründlich.",
     includes: [
       "Räumung des gesamten Dachbodens",
@@ -102,7 +102,7 @@ const services = [
     id: "sperrmuellentsorgung",
     title: "Sperrmüllentsorgung",
     icon: Trash2,
-    priceRange: "ab 79 €",
+    priceRange: "ab 99 €",
     description: "Schnelle Abholung und Entsorgung von Sperrmüll – auch kurzfristig.",
     includes: [
       "Abholung vor Ort",

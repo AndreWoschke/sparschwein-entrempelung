@@ -57,7 +57,7 @@ export const BLOG_POSTS: BlogPost[] = [
       {
         type: "ul",
         items: [
-          "Kellerentrümpelung (klein, bis 10 m³): ab 299 €",
+          "Kellerentrümpelung (klein, bis 10 m³): ab 99 €",
           "1-Zimmer-Wohnung (bis 25 m³): ab 690 €",
           "2-Zimmer-Wohnung (bis 40 m³): ab 1.190 €",
           "3-4-Zimmer-Wohnung (bis 60 m³): ab 1.690 €",
@@ -756,7 +756,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Keller entrümpeln in 1 Tag: Ablauf, Preise & Tipps für den Herbstputz 2026",
     metaTitle: "Keller entrümpeln in 1 Tag | Ablauf & Preise 2026",
     metaDescription:
-      "Keller entrümpeln in nur einem Tag: realistische Preise, klarer Ablauf und Profi-Tipps für den Herbstputz im Havelland. Festpreis ab 299 €. ☎ 01579 2639408",
+      "Keller entrümpeln in nur einem Tag: realistische Preise, klarer Ablauf und Profi-Tipps für den Herbstputz im Havelland. Festpreis ab 99 €. ☎ 01579 2639408",
     excerpt:
       "Der Herbst ist die beste Zeit für die Keller-Entrümpelung. Wir zeigen, wie eine Räumung in einem Tag abläuft, was 2026 realistisch kostet und mit welchen Tricks Sie schneller fertig sind.",
     publishedAt: "2026-10-06",
@@ -770,7 +770,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "keller ausmisten herbst",
     ],
     content: [
-      { type: "p", text: "Im Herbst werden Keller wieder zur Heizraum-Logistik – höchste Zeit, das alte Chaos loszuwerden. Eine professionelle Keller-Entrümpelung im Havelland dauert in der Regel nur einen Tag, kostet ab 299 € und endet mit besenreinem Boden. Dieser Ratgeber zeigt Ablauf, Preise und die wichtigsten Tipps." },
+      { type: "p", text: "Im Herbst werden Keller wieder zur Heizraum-Logistik – höchste Zeit, das alte Chaos loszuwerden. Eine professionelle Keller-Entrümpelung im Havelland dauert in der Regel nur einen Tag, kostet ab 99 € und endet mit besenreinem Boden. Dieser Ratgeber zeigt Ablauf, Preise und die wichtigsten Tipps." },
       { type: "h2", text: "Warum gerade im Herbst entrümpeln?" },
       { type: "ul", items: [
         "Vor dem Winter: Heizung, Pelletlager und Vorräte brauchen Platz",
@@ -1084,7 +1084,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Frühjahrsputz XXL: Dachboden komplett entrümpeln 2027",
     metaTitle: "Dachboden entrümpeln Frühjahr 2027 | Ablauf & Preise",
     metaDescription:
-      "Dachboden im Frühjahr komplett entrümpeln: Preise, Ablauf, Wertanrechnung für Antiquitäten. Festpreis ab 399 € im Havelland. ☎ 01579 2639408",
+      "Dachboden im Frühjahr komplett entrümpeln: Preise, Ablauf, Wertanrechnung für Antiquitäten. Festpreis ab 99 € im Havelland. ☎ 01579 2639408",
     excerpt:
       "Der Dachboden ist die letzte Festung des Hausrats – und oft die beste Quelle für Wertanrechnung. Wir zeigen, wie eine komplette Dachboden-Räumung im Frühjahr 2027 abläuft.",
     publishedAt: "2027-03-11",
@@ -1098,7 +1098,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "dachboden ausmisten kosten",
     ],
     content: [
-      { type: "p", text: "Im Frühjahr ist Dachboden-Zeit. Nach dem Winter ist die Luft trocken, die Temperaturen angenehm, und alles, was über Generationen unter dem Dach gelandet ist, kann endlich raus. Eine Profi-Räumung im Havelland kostet ab 399 € – und bringt oft erstaunliche Antiquitätenfunde zutage." },
+      { type: "p", text: "Im Frühjahr ist Dachboden-Zeit. Nach dem Winter ist die Luft trocken, die Temperaturen angenehm, und alles, was über Generationen unter dem Dach gelandet ist, kann endlich raus. Eine Profi-Räumung im Havelland kostet ab 99 € – und bringt oft erstaunliche Antiquitätenfunde zutage." },
       { type: "h2", text: "Was findet sich typischerweise auf Dachböden?" },
       { type: "ul", items: [
         "Alte Möbel der Großeltern (oft echte Antiquitäten!)",

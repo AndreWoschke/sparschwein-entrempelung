@@ -9,7 +9,7 @@ const introParagraphs = [
   "Wenn eine Wohnung übergeben werden muss, zählt jede Stunde. Wir räumen 1- bis 4-Zimmer-Wohnungen in 4–8 Stunden komplett – Möbel, Hausrat, Elektrogeräte, Teppiche.",
   "Übergabe an Vermieter oder Käufer: besenrein, ohne Nacharbeiten. Wir kommen mit eigener Crew (2–4 Personen) und eigenem Transporter.",
   "Sie bekommen einen festen Ansprechpartner vom Anruf bis zur Schlüsselübergabe – ohne Vermittlung, ohne Subunternehmer.",
-  "Ob in Falkensee, Nauen, Brieselang oder im übrigen Havelland: Ihre Wohnungsentrümpelung führen wir zum Festpreis ab 299 € durch – ohne Anfahrtskosten, mit Termin meist innerhalb 24–48 Stunden.",
+  "Ob in Falkensee, Nauen, Brieselang oder im übrigen Havelland: Ihre Wohnungsentrümpelung führen wir zum Festpreis ab 99 € durch – ohne Anfahrtskosten, mit Termin meist innerhalb 24–48 Stunden.",
 ];
 
 const detailedDescription = `Eine Wohnungsentrümpelung umfasst das vollständige Leerräumen einer Wohnung inklusive Demontage, Abtransport und Entsorgung. Im Unterschied zum Umzugsunternehmen tragen wir nichts ins neue Zuhause, sondern in den Container – fachgerecht getrennt nach Sperrmüll, Elektroschrott und Sondermüll.
@@ -92,7 +92,7 @@ const whyUsPoints = [
 const faqs = [
   {
     question: "Was kostet eine Wohnungsentrümpelung?",
-    answer: "Ab 299 € für kleine Wohnungen. Eine 2-Zimmer-Wohnung liegt typischerweise bei 400–800 €, abhängig von Größe, Etage und Volumen. Der Festpreis wird vor Auftrag schriftlich vereinbart.",
+    answer: "Ab 99 € für kleine Räumungen. Eine 2-Zimmer-Wohnung liegt typischerweise bei 400–800 €, abhängig von Größe, Etage und Volumen. Der Festpreis wird vor Auftrag schriftlich vereinbart.",
   },
   {
     question: "Wie lange dauert eine Wohnungsentrümpelung?",

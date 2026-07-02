@@ -75,7 +75,7 @@ const whyUsPoints = [
 const faqs = [
   {
     question: "Was kostet eine Kellerentrümpelung?",
-    answer: "Ab 149 €. Ein durchschnittlicher Keller (10–20 m²) liegt typischerweise bei 200–500 €, je nach Füllstand und Zugang. Festpreis nach Besichtigung.",
+    answer: "Ab 99 €. Ein durchschnittlicher Keller (10–20 m²) liegt typischerweise bei 200–500 €, je nach Füllstand und Zugang. Festpreis nach Besichtigung.",
   },
   {
     question: "Tragen Sie schwere Sachen die Treppe hoch?",
