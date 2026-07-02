@@ -34,7 +34,7 @@ export const COMPANY_INFO = {
   responseTime: "Ø 30 Min.",
   vehicles: "2-3",
   googleRating: 5.0,
-  googleReviewCount: 6,
+  googleReviewCount: 36,
   isInsured: true,
   isDirectProvider: true,
   hasOwnStaff: true,
@@ -846,7 +846,6 @@ export function generateFAQSchema(faqs: typeof FAQ_ITEMS) {
 
 // Generate Review Schema
 export function generateReviewSchema(reviews: typeof REVIEWS) {
-  const avg = reviews.reduce((sum, r) => sum + r.rating, 0) / Math.max(reviews.length, 1);
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -854,10 +853,11 @@ export function generateReviewSchema(reviews: typeof REVIEWS) {
     name: COMPANY_INFO.name,
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: avg.toFixed(1),
+      // Gesamt-Aggregat aus dem Google-Profil (36 Bewertungen); unten eine Auswahl als review-Items
+      ratingValue: COMPANY_INFO.googleRating,
       bestRating: 5,
       worstRating: 1,
-      reviewCount: reviews.length,
+      reviewCount: COMPANY_INFO.googleReviewCount,
       itemReviewed: {
         "@type": "LocalBusiness",
         "@id": `${COMPANY_INFO.website}/#localbusiness`,
