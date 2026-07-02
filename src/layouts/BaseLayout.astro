@@ -24,7 +24,9 @@ const {
   jsonLd = [],
 } = Astro.props;
 
-const canonical = new URL(canonicalPath, Astro.site).href;
+// Trailing-Slash erzwingen, damit Canonical == tatsaechliche URL == Sitemap
+const normalizedPath = canonicalPath.endsWith("/") ? canonicalPath : `${canonicalPath}/`;
+const canonical = new URL(normalizedPath, Astro.site).href;
 const ogImage = new URL("/og-image.jpg", Astro.site).href;
 ---
 

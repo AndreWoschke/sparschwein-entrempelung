@@ -35,4 +35,4 @@ User-agent: LinkedInBot
 Allow: /
 
 # Sitemap
-Sitemap: https://sparschwein-entruempelung.de/sitemap.xml
+Sitemap: https://sparschwein-entruempelung.de/sitemap-index.xml
