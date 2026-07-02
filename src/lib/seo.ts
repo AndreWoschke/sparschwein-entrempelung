@@ -75,7 +75,7 @@ export const SERVICES = [
     longDescription: "Hausentrümpelung komplett: Alle Etagen, Keller, Dachboden, Garage. Perfekt bei Hausverkauf, Erbschaft oder Umzug. Wir kümmern uns um alles.",
     icon: "Building2",
     slug: "/hausentruempelung",
-    metaTitle: "Hausentrümpelung | Komplett-Service inkl. Keller & Dachboden",
+    metaTitle: "Hausentrümpelung Havelland | Komplett inkl. Keller & Dachboden",
     metaDescription: "Hausentrümpelung zum Festpreis. Komplettes Haus inkl. Keller, Dachboden, Garage. Besenreine Übergabe garantiert. ☎ 01579 2639408",
   },
   {
@@ -86,7 +86,7 @@ export const SERVICES = [
     longDescription: "Kellerentrümpelung schnell und unkompliziert. Alte Möbel, Kartons, Sperrmüll – wir räumen alles aus und entsorgen fachgerecht.",
     icon: "Warehouse",
     slug: "/kellerentruempelung",
-    metaTitle: "Kellerentrümpelung | Schnell & günstig entrümpeln",
+    metaTitle: "Kellerentrümpelung Havelland | Schnell, günstig & besenrein",
     metaDescription: "Keller entrümpeln lassen zum Festpreis. Schnelle Termine, fachgerechte Entsorgung, faire Preise. ☎ 01579 2639408",
   },
   {
@@ -97,7 +97,7 @@ export const SERVICES = [
     longDescription: "Dachbodenentrümpelung auch bei engen Treppen und schwierigen Zugängen. Wir tragen alles runter und entsorgen fachgerecht.",
     icon: "Layers",
     slug: "/dachbodenentruempelung",
-    metaTitle: "Dachbodenentrümpelung | Auch bei schwierigen Zugängen",
+    metaTitle: "Dachbodenentrümpelung Havelland | Auch schwierige Zugänge",
     metaDescription: "Dachboden entrümpeln lassen – auch enge Treppen. Festpreis nach Besichtigung, besenreine Übergabe. ☎ 01579 2639408",
   },
   {
@@ -119,7 +119,7 @@ export const SERVICES = [
     longDescription: "Gewerbeentrümpelung für Büros, Lager, Praxen, Geschäfte. Diskret, schnell und außerhalb der Geschäftszeiten möglich.",
     icon: "Building",
     slug: "/firmen-gewerbeentruempelung",
-    metaTitle: "Gewerbeentrümpelung | Büro, Lager, Praxis entrümpeln",
+    metaTitle: "Gewerbeentrümpelung Havelland | Büro, Lager & Praxis",
     metaDescription: "Firmen- und Gewerbeentrümpelung. Diskret, effizient, auch außerhalb der Geschäftszeiten. ☎ 01579 2639408",
   },
   {
@@ -130,7 +130,7 @@ export const SERVICES = [
     longDescription: "Wir holen Ihren Schrott kostenlos ab: Altmetall, Elektroschrott, Haushaltsgeräte, Fahrräder, Heizkörper und mehr. Schnelle Termine, umweltgerechte Entsorgung.",
     icon: "Recycle",
     slug: "/schrottabholung",
-    metaTitle: "Schrottabholung | Kostenlos Altmetall & Elektroschrott abholen",
+    metaTitle: "Schrottabholung Havelland | Altmetall & Elektroschrott kostenlos",
     metaDescription: "Kostenlose Schrottabholung im Havelland. Altmetall, Elektroschrott, Haushaltsgeräte abholen lassen. Schnelle Termine. ☎ 01579 2639408",
   },
   {
@@ -207,6 +207,18 @@ export const REGIONS = [
     metaDescription: "Entrümpelung Wustermark inkl. Elstal, Priort & Buchow-Karpzow: Festpreis ab 299 €, eigenes Team, besenreine Übergabe. ☎ 01579 2639408",
     distance: "ca. 10 Min.",
     postalCodes: ["14641"],
+  },
+  {
+    id: "staaken",
+    name: "Staaken",
+    slug: "/entruempelung-staaken",
+    isHeadquarters: false,
+    description: "Berlin-Spandau direkt nebenan – kurze Anfahrt, feste Preise.",
+    longDescription: "Staaken grenzt unmittelbar an Dallgow-Döberitz und ist von unserem Standort Brieselang in rund 15 Minuten erreichbar. Wir räumen hier regelmäßig Wohnungen, Keller und Häuser – im Berliner wie im Brandenburger Teil.",
+    metaTitle: "Entrümpelung Staaken (Berlin-Spandau) ab 299 € · Termin in 24 h",
+    metaDescription: "Entrümpelung Staaken (Berlin-Spandau) vom Anbieter nebenan: Festpreis ab 299 €, 15 Min. Anfahrt aus Brieselang, eigenes Team, besenreine Übergabe. ☎ 01579 2639408",
+    distance: "ca. 15 Min.",
+    postalCodes: ["13591", "13593"],
   },
   {
     id: "rathenow",
@@ -327,6 +339,18 @@ export const REGIONS = [
     metaDescription: "Entrümpelung Werder (Havel) zum Festpreis ab 299 €. Haushaltsauflösung, Hausentrümpelung, besenreine Übergabe. ☎ 01579 2639408",
     distance: "ca. 25 Min.",
     postalCodes: ["14542"],
+  },
+  {
+    id: "potsdam",
+    name: "Potsdam",
+    slug: "/entruempelung-potsdam",
+    isHeadquarters: false,
+    description: "Landeshauptstadt an der Havel – regelmäßige Einsätze.",
+    longDescription: "Potsdam als Landeshauptstadt Brandenburgs erreichen wir aus Brieselang in rund 30 Minuten. Von Villen in Babelsberg über Altbauten in der Innenstadt bis zu Plattenbauten am Schlaatz führen wir hier regelmäßig Wohnungs- und Haushaltsauflösungen durch.",
+    metaTitle: "Entrümpelung Potsdam ab 299 € · Festpreis · Termin in 24 h",
+    metaDescription: "Entrümpelung Potsdam zum Festpreis ab 299 €. Wohnung, Haus, Keller – eigene Mitarbeiter, kostenlose Besichtigung, besenreine Übergabe. ☎ 01579 2639408",
+    distance: "ca. 30 Min.",
+    postalCodes: ["14467", "14469", "14471", "14473", "14482"],
   },
   {
     id: "havelland",
@@ -546,6 +570,16 @@ export const LOCATION_DATA: Record<string, {
       { question: "Räumen Sie auch Scheunen und Schuppen in Wustermark?", answer: "Ja, in den dörflichen Ortsteilen sind Scheunen-, Schuppen- und Hofentrümpelungen Standard. Wir bringen passende Fahrzeuge mit." },
     ],
   },
+  staaken: {
+    geo: { latitude: 52.5350, longitude: 13.1517 },
+    postalCodes: ["13591", "13593"],
+    faqs: [
+      { question: "Wie schnell sind Sie in Staaken vor Ort?", answer: "Staaken grenzt direkt an Dallgow-Döberitz – aus Brieselang sind wir in rund 15 Minuten bei Ihnen. Besichtigungstermine bieten wir hier oft noch in derselben Woche an." },
+      { question: "Entrümpeln Sie im Berliner und im Brandenburger Teil von Staaken?", answer: "Ja. Staaken ist zwischen Berlin-Spandau und Brandenburg geteilt – wir sind in beiden Teilen tätig, von der Heerstraße Nord bis zum Brandenburger Ortsrand." },
+      { question: "Räumen Sie auch Wohnungen in den Hochhaussiedlungen in Staaken?", answer: "Ja, Wohnungs- und Kellerentrümpelungen in den Mehrfamilienhäusern rund um den Brunsbütteler Damm und die Heerstraße gehören zu unseren häufigsten Aufträgen in Staaken." },
+      { question: "Was kostet eine Entrümpelung in Staaken?", answer: "Die Preise starten ab 299 €. Den verbindlichen Festpreis nennen wir nach einer kostenlosen Besichtigung – ohne Anfahrtszuschlag, da Staaken direkt in unserem Einzugsgebiet liegt." },
+    ],
+  },
   rathenow: {
     geo: { latitude: 52.6047, longitude: 12.3367 },
     postalCodes: ["14712"],
@@ -644,6 +678,16 @@ export const LOCATION_DATA: Record<string, {
       { question: "Entrümpeln Sie auch die Ortsteile Glindow, Töplitz und Plötzin?", answer: "Ja, alle Ortsteile von Werder werden ohne Anfahrtspauschale bedient." },
       { question: "Räumen Sie auch Villen und Häuser am Wasser?", answer: "Ja, Haushaltsauflösungen in Einfamilienhäusern und Villen am Havelufer sind unser häufigster Auftrag in Werder." },
       { question: "Übernehmen Sie auch Wochenendgrundstücke und Lauben?", answer: "Ja, Räumungen von Gartenhäusern, Lauben und Wochenendsiedlungen rund um die Havel gehören zum Tagesgeschäft." },
+    ],
+  },
+  potsdam: {
+    geo: { latitude: 52.3906, longitude: 13.0645 },
+    postalCodes: ["14467", "14469", "14471", "14473", "14482"],
+    faqs: [
+      { question: "Wie weit ist Potsdam von Brieselang entfernt?", answer: "Die Anfahrt dauert rund 30 Minuten. Potsdam gehört zu unserem festen Einsatzgebiet – Termine planen wir effizient mit Aufträgen in Werder und Ketzin." },
+      { question: "Entrümpeln Sie auch Altbauwohnungen in der Potsdamer Innenstadt?", answer: "Ja. Von der Gründerzeitwohnung im Holländischen Viertel bis zum Reihenhaus in Babelsberg übernehmen wir alle Objekttypen – auch bei engen Treppenhäusern und Halteverboten organisieren wir den Abtransport." },
+      { question: "Kommen Sie auch in die Potsdamer Ortsteile wie Babelsberg, Bornstedt oder am Schlaatz?", answer: "Ja, alle Potsdamer Stadtteile gehören zu unserem Einsatzgebiet – von den Villengebieten am Griebnitzsee bis zu den Wohnquartieren am Schlaatz und in Drewitz." },
+      { question: "Was kostet eine Entrümpelung in Potsdam?", answer: "Die Preise starten ab 299 €. Den verbindlichen Festpreis nennen wir nach einer kostenlosen Besichtigung vor Ort – ohne versteckte Kosten." },
     ],
   },
   havelland: {

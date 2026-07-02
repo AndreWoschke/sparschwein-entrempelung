@@ -185,8 +185,9 @@ export default function HomePage() {
             </h1>
             
             <p className="mx-auto mb-6 max-w-2xl text-lg text-primary-foreground/90 sm:text-xl">
-              Über 500 erfolgreiche Entrümpelungen in Brieselang, Falkensee & Havelland. 
-              Festpreis nach kostenloser Besichtigung – besenreine Übergabe garantiert.
+              Ihre Entrümpelungsfirma für Brieselang, Falkensee & das Havelland: über 500
+              erfolgreiche Entrümpelungen, Festpreis nach kostenloser Besichtigung –
+              besenreine Übergabe garantiert.
             </p>
 
             {/* Anti-Vermittler Statement */}
@@ -337,11 +338,12 @@ export default function HomePage() {
                 Über uns
               </span>
               <h2 id="ueber-uns-heading" className="mb-4 text-3xl font-bold">
-                Ihr zuverlässiger Partner im Havelland
+                Ihre Entrümpelungsfirma im Havelland
               </h2>
               <p className="mb-6 text-lg text-muted-foreground">
-                Seit 2015 führen wir Sparschwein Entrümpelung als inhabergeführtes Familienunternehmen in Brieselang. 
-                Was uns von großen Anbietern unterscheidet: Bei uns bekommen Sie persönlichen Service – 
+                Seit 2015 führen wir Sparschwein Entrümpelung als inhabergeführte
+                Entrümpelungsfirma und Familienbetrieb in Brieselang. Was uns von großen
+                Anbietern unterscheidet: Bei uns bekommen Sie persönlichen Service –
                 keine anonyme Hotline, keine Subunternehmer.
               </p>
               

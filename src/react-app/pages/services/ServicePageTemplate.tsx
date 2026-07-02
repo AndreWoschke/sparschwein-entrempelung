@@ -74,6 +74,11 @@ interface ServicePageProps {
   priceFactors: string[];
   // Optionaler H1-Override (SEO): sonst wird service.title verwendet
   h1?: string;
+  // Optionaler Varianten-Block mit H3-Ueberschriften (z.B. Container-Arten) fuer Keyword-Abdeckung
+  variantsBadge?: string;
+  variantsTitle?: string;
+  variantsDescription?: string;
+  variants?: { title: string; description: string }[];
   // NEU: Erweiterte Content-Sektionen
   detailedDescription?: string;
   disposalInfo?: string;
@@ -93,6 +98,10 @@ export function ServicePageTemplate({
   processSteps,
   priceFactors,
   h1,
+  variantsBadge,
+  variantsTitle,
+  variantsDescription,
+  variants,
   detailedDescription,
   disposalInfo,
   targetGroups,
@@ -292,6 +301,28 @@ export function ServicePageTemplate({
           ))}
         </div>
       </section>
+
+      {/* Varianten-Block (optional): H3-Ueberschriften fuer Keyword-Abdeckung */}
+      {variants && variants.length > 0 && (
+        <section className="section-container">
+          <SectionHeader
+            badge={variantsBadge || "Varianten"}
+            title={variantsTitle || `${service.title} – Varianten`}
+            description={variantsDescription}
+          />
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {variants.map((v, index) => (
+              <Card key={index} className="card-hover">
+                <CardContent className="p-6">
+                  <CheckCircle2 className="mb-3 h-8 w-8 text-primary" />
+                  <h3 className="mb-2 font-semibold">{v.title}</h3>
+                  <p className="text-sm text-muted-foreground">{v.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Für wen? - Zielgruppen */}
       <section className="bg-secondary">

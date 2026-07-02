@@ -249,7 +249,8 @@ const REGION_GALLERIES: Record<
 const NEIGHBOURS: Record<string, string[]> = {
   brieselang: ["dallgow-doeberitz", "falkensee", "wustermark", "schoenwalde-glien"],
   falkensee: ["brieselang", "dallgow-doeberitz", "schoenwalde-glien", "wustermark"],
-  "dallgow-doeberitz": ["falkensee", "brieselang", "wustermark"],
+  "dallgow-doeberitz": ["falkensee", "brieselang", "wustermark", "staaken"],
+  staaken: ["dallgow-doeberitz", "falkensee", "brieselang", "wustermark"],
   nauen: ["wustermark", "brieselang", "paulinenaue", "friesack"],
   wustermark: ["brieselang", "nauen", "dallgow-doeberitz", "ketzin"],
   "schoenwalde-glien": ["brieselang", "falkensee", "hennigsdorf", "velten"],
@@ -261,7 +262,8 @@ const NEIGHBOURS: Record<string, string[]> = {
   hennigsdorf: ["velten", "oranienburg", "schoenwalde-glien"],
   velten: ["hennigsdorf", "oranienburg", "schoenwalde-glien"],
   oranienburg: ["velten", "hennigsdorf"],
-  werder: ["ketzin", "wustermark"],
+  werder: ["ketzin", "wustermark", "potsdam"],
+  potsdam: ["werder", "ketzin", "wustermark", "brieselang"],
   havelland: ["brieselang", "falkensee", "nauen", "rathenow"],
 };
 
@@ -436,10 +438,39 @@ export function LocationPageTemplate({ region }: LocationPageProps) {
         </p>
       </>
     ),
+    "staaken": (
+      <>
+        <p className="mb-4">
+          Staaken liegt am westlichen Rand von Berlin-Spandau und grenzt unmittelbar an
+          Dallgow-Döberitz – und damit direkt an unser Kerngebiet. Aus Brieselang sind wir
+          in rund 15 Minuten vor Ort. Die Besonderheit: Staaken ist historisch zwischen
+          Berlin und Brandenburg geteilt, weshalb wir hier sowohl im Berliner als auch im
+          brandenburgischen Teil regelmäßig im Einsatz sind.
+        </p>
+        <p className="mb-4">
+          Die Bebauung reicht von den großen Wohnsiedlungen rund um die Heerstraße Nord und
+          den Brunsbütteler Damm bis zu Einfamilienhäusern und Reihenhäusern im
+          brandenburgischen Teil. Entsprechend häufig übernehmen wir hier
+          Wohnungsentrümpelungen und Kellerräumungen in Mehrfamilienhäusern sowie
+          Haushaltsauflösungen in den ruhigeren Wohnstraßen.
+        </p>
+        <p className="mb-4">
+          Für Kunden in Staaken bedeutet die kurze Distanz nach Brieselang: schnelle
+          Besichtigungstermine, keine Anfahrtskosten und ein fester Ansprechpartner statt
+          anonymer Vermittlung. Wir kennen die Zufahrten und Parksituationen der
+          Großsiedlungen und planen den Abtransport entsprechend.
+        </p>
+        <p>
+          Von Staaken aus betreuen wir ebenso die angrenzenden Bereiche in Dallgow-Döberitz,
+          Falkensee und dem westlichen Spandau. Jede Entrümpelung in Staaken führen wir mit
+          eigenem Team und eigenen Fahrzeugen durch.
+        </p>
+      </>
+    ),
     "havelland": (
       <>
         <p className="mb-4">
-          Das Havelland als Landkreis westlich von Berlin bildet unser gesamtes Kerngebiet. 
+          Das Havelland als Landkreis westlich von Berlin bildet unser gesamtes Kerngebiet.
           Von Brieselang aus erreichen wir alle Gemeinden des Havellandes – von Falkensee im 
           Osten bis Rathenow im Westen, von Nauen im Norden bis Ketzin im Süden. Diese 
           flächendeckende Präsenz unterscheidet uns von überregionalen Anbietern ohne lokale 
@@ -700,6 +731,36 @@ export function LocationPageTemplate({ region }: LocationPageProps) {
           Eigenes Team, transparente Festpreise und besenreine Übergabe – darauf
           können sich Kunden in Oranienburg verlassen. Keine Vermittlung, keine
           versteckten Kosten.
+        </p>
+      </>
+    ),
+    "potsdam": (
+      <>
+        <p className="mb-4">
+          Potsdam ist als Landeshauptstadt Brandenburgs mit rund 185.000 Einwohnern die
+          größte Stadt in unserem erweiterten Einsatzgebiet. Aus Brieselang erreichen wir
+          Potsdam über die B273 und die A10 in etwa 30 Minuten. Die Stadt an der Havel
+          verbindet historische Altbauten, Villengebiete und große Wohnquartiere – ein
+          entsprechend vielfältiges Feld für Entrümpelungen aller Art.
+        </p>
+        <p className="mb-4">
+          Besonders häufig übernehmen wir in Potsdam Wohnungsauflösungen in den
+          Gründerzeitbauten der Innenstadt und im Holländischen Viertel, Haushaltsauflösungen
+          in den Villen von Babelsberg und am Griebnitzsee sowie Keller- und
+          Wohnungsentrümpelungen in den Plattenbauquartieren am Schlaatz und in Drewitz.
+          Enge Treppenhäuser und Halteverbotszonen kennen wir – wir planen Anfahrt und
+          Abtransport entsprechend.
+        </p>
+        <p className="mb-4">
+          Trotz der Stadtgröße bleiben wir der persönliche Direktanbieter: kostenlose
+          Besichtigung, verbindlicher Festpreis und ein fester Ansprechpartner statt anonymer
+          Vermittlung. Termine in Potsdam kombinieren wir effizient mit Aufträgen in Werder
+          und Ketzin, sodass für unsere Kunden keine Anfahrtspauschale anfällt.
+        </p>
+        <p>
+          Von Potsdam aus betreuen wir ebenso die angrenzenden Bereiche in Potsdam-Mittelmark
+          und Richtung Werder (Havel). Jede Entrümpelung in Potsdam führen wir mit eigenem
+          Team und eigenen Fahrzeugen durch – seit 2015 im Havelland verwurzelt.
         </p>
       </>
     ),

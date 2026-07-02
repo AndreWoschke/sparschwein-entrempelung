@@ -114,6 +114,33 @@ const faqs = [
   ...FAQ_ITEMS.slice(0, 2),
 ];
 
+const containerVariants = [
+  {
+    title: "Bauschutt-Container Brieselang",
+    description: "Reiner Bauschutt – Beton, Ziegel, Mörtel, Fliesen. Ideal für Bad-, Küchen- oder Dachsanierung. Ab 149 € inkl. Lieferung, Standzeit und Entsorgung.",
+  },
+  {
+    title: "Baumischabfall-Container",
+    description: "Gemischter Bauschutt mit Tapete, Gips, Holz oder Metall – wenn eine saubere Trennung vor Ort nicht möglich ist. Fairer Festpreis nach Abfallart.",
+  },
+  {
+    title: "Altholz-Container (A I–A III) im Havelland",
+    description: "Dachlatten, Dielen, OSB und Spanplatten – unbehandeltes bis verleimtes Holz aus Dach- und Bodensanierungen.",
+  },
+  {
+    title: "Bodenaushub- & Erdaushub-Container Brieselang",
+    description: "Mutterboden, Lehm und Sand aus Baugrube, Teichbau oder Pflasterarbeiten – mit korrekter Klassifizierung und Nachweis.",
+  },
+  {
+    title: "Sperrmüll-Container",
+    description: "Möbel, Matratzen, Teppiche und Hausrat – ideal ergänzend zur Wohnungs- oder Hausentrümpelung bei großem Volumen.",
+  },
+  {
+    title: "Container mieten in Falkensee, Nauen & Wustermark",
+    description: "Denselben Festpreis-Service bieten wir im gesamten Havelland – Lieferung meist innerhalb von 24 Stunden, ohne Anfahrtszuschlag.",
+  },
+];
+
 export default function ContainerdienstPage() {
   return (
     <ServicePageTemplate
@@ -122,6 +149,10 @@ export default function ContainerdienstPage() {
       situations={situations}
       processSteps={processSteps}
       priceFactors={priceFactors}
+      variantsBadge="Container-Arten"
+      variantsTitle="Container für jede Abfallart in Brieselang & Havelland"
+      variantsDescription="Wählen Sie den passenden Container – wir beraten vor der Bestellung, damit Sie nicht für die falsche Abfallart zahlen."
+      variants={containerVariants}
       detailedDescription={detailedDescription}
       disposalInfo={disposalInfo}
       targetGroups={targetGroups}
