@@ -167,7 +167,7 @@ export function Footer() {
             <div className="text-sm text-primary-foreground/80">
               <p>© {new Date().getFullYear()} {COMPANY_INFO.name}. Alle Rechte vorbehalten.</p>
               <p className="mt-1 text-xs">
-                Inhaber: {COMPANY_INFO.owner.name} | Stand: Januar 2026 | 
+                Inhaber: {COMPANY_INFO.owner.name} |
                 {COMPANY_INFO.address.street}, {COMPANY_INFO.address.postalCode} {COMPANY_INFO.address.city}
               </p>
             </div>

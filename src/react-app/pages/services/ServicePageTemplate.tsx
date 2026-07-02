@@ -368,7 +368,7 @@ export function ServicePageTemplate({
           <div className="text-center">
             <p className="mb-4 text-sm text-muted-foreground">
               <Clock className="mr-1 inline h-4 w-4" />
-              Preise gültig bis März 2026 | Letzte Aktualisierung: Januar 2026
+              Alle Preise als Festpreis nach kostenloser Besichtigung – ohne versteckte Kosten.
             </p>
             <a href="/preise">
               <Button size="lg" className="gap-2">

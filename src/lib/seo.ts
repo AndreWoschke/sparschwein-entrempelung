@@ -50,8 +50,8 @@ export const COMPANY_INFO = {
     sunday: null,
   },
   openingHoursText: "Mo–Fr: 08:00–18:00 Uhr",
-  lastUpdated: "2026-01-24",
-  pricesValidUntil: "2026-03-31",
+  lastUpdated: "2026-07-02",
+  pricesValidUntil: "2026-12-31",
 };
 
 // SEO 2026: Leistungsseiten OHNE Ort im Slug

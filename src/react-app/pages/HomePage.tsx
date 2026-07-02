@@ -434,7 +434,7 @@ export default function HomePage() {
         />
         <p className="mb-8 text-center text-sm text-muted-foreground">
           <Clock className="mr-1 inline h-4 w-4" />
-          Preise gültig bis März 2026 | Letzte Aktualisierung: Januar 2026
+          Alle Preise als Festpreis nach kostenloser Besichtigung – ohne versteckte Kosten.
         </p>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {PRICING.map((tier) => (
@@ -491,7 +491,7 @@ export default function HomePage() {
           id="kundenstimmen-heading"
           badge="Kundenstimmen"
           title="Das sagen unsere Kunden im Havelland"
-          description="Echte Bewertungen aus unserem Google-Unternehmensprofil – zuletzt aktualisiert Januar 2026"
+          description="Echte Bewertungen aus unserem Google-Unternehmensprofil – 5,0 ★ bei 36 Bewertungen"
         />
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           {/* Left: Review Cards */}
