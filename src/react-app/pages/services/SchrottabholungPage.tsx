@@ -1,7 +1,7 @@
 import { SERVICES, FAQ_ITEMS } from "@/lib/seo";
 import { ServicePageTemplate } from "./ServicePageTemplate";
 
-import schrottabholungImage from "@/assets/schrottabholung.webp";
+import schrottabholungImage from "@/assets/schrottabholung.webp?url";
 
 const service = SERVICES.find((s) => s.id === "schrottabholung")!;
 

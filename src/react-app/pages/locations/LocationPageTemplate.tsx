@@ -37,34 +37,34 @@ import {
   generateFAQSchema,
   generateReviewSchema,
 } from "@/lib/seo";
-import brieselangVorherNachher from "@/assets/entruempelung-brieselang-vorher-nachher.webp";
-import brieselangTeam from "@/assets/sparschwein-team-brieselang-moebelabtransport.webp";
-import falkenseeKellerTeam from "@/assets/entruempelung-falkensee-keller-team.webp";
-import falkenseeVorherNachher from "@/assets/haushaltsaufloesung-falkensee-vorher-nachher.webp";
-import dallgowTeamTransporter from "@/assets/haushaltsaufloesung-dallgow-team-transporter.webp";
-import dallgowGarageVorherNachher from "@/assets/entruempelung-dallgow-garage-vorher-nachher.webp";
-import nauenGarageVorherNachher from "@/assets/wohnungsaufloesung-nauen-garage-vorher-nachher.webp";
-import nauenTeamKeller from "@/assets/entruempelung-nauen-team-keller.webp";
-import wustermarkKlaviertransport from "@/assets/haushaltsaufloesung-wustermark-klaviertransport.webp";
-import wustermarkDachbodenVorherNachher from "@/assets/entruempelung-wustermark-dachboden-vorher-nachher.webp";
-import rathenowVorherNachher from "@/assets/haushaltsaufloesung-rathenow-vorher-nachher.webp";
-import rathenowTeamTransporter from "@/assets/entruempelung-rathenow-team-transporter.webp";
-import premnitzTeamMoebel from "@/assets/wohnungsaufloesung-premnitz-team-moebelabtransport.webp";
-import premnitzKellerVorherNachher from "@/assets/entruempelung-premnitz-keller-vorher-nachher.webp";
-import friesackKellerVorherNachher from "@/assets/entruempelung-friesack-keller-vorher-nachher.webp";
-import friesackTeamHaushalt from "@/assets/kellerentruempelung-friesack-team-haushaltsaufloesung.webp";
-import schoenwaldeVorherNachher from "@/assets/haushaltsaufloesung-schoenwalde-glien-vorher-nachher.webp";
-import schoenwaldeTeamTransporter from "@/assets/entruempelung-schoenwalde-glien-team-transporter.webp";
-import ketzinVorherNachher from "@/assets/haushaltsaufloesung-ketzin-vorher-nachher.webp";
-import ketzinTeamMoebel from "@/assets/entruempelung-ketzin-team-moebeltransport.webp";
-import paulinenaueVorherNachher from "@/assets/haushaltsaufloesung-paulinenaue-vorher-nachher.webp";
-import paulinenaueTeamTransporter from "@/assets/entruempelung-paulinenaue-team-transporter.webp";
-import havellandTeamRaeumung from "@/assets/entruempelung-havelland-team-raeumungsservice.webp";
-import oranienburgMoebelabtransport from "@/assets/entruempelung-oranienburg-moebelabtransport.webp";
-import werderVorherNachher from "@/assets/entruempelung-werder-havel-vorher-nachher.webp";
-import hennigsdorfTeamTransporter from "@/assets/entruempelung-hennigsdorf-team-transporter.webp";
-import veltenKellerTeam from "@/assets/entruempelung-velten-keller-team.webp";
-import veltenHaushaltVorherNachher from "@/assets/haushaltsaufloesung-velten-vorher-nachher.webp";
+import brieselangVorherNachher from "@/assets/entruempelung-brieselang-vorher-nachher.webp?url";
+import brieselangTeam from "@/assets/sparschwein-team-brieselang-moebelabtransport.webp?url";
+import falkenseeKellerTeam from "@/assets/entruempelung-falkensee-keller-team.webp?url";
+import falkenseeVorherNachher from "@/assets/haushaltsaufloesung-falkensee-vorher-nachher.webp?url";
+import dallgowTeamTransporter from "@/assets/haushaltsaufloesung-dallgow-team-transporter.webp?url";
+import dallgowGarageVorherNachher from "@/assets/entruempelung-dallgow-garage-vorher-nachher.webp?url";
+import nauenGarageVorherNachher from "@/assets/wohnungsaufloesung-nauen-garage-vorher-nachher.webp?url";
+import nauenTeamKeller from "@/assets/entruempelung-nauen-team-keller.webp?url";
+import wustermarkKlaviertransport from "@/assets/haushaltsaufloesung-wustermark-klaviertransport.webp?url";
+import wustermarkDachbodenVorherNachher from "@/assets/entruempelung-wustermark-dachboden-vorher-nachher.webp?url";
+import rathenowVorherNachher from "@/assets/haushaltsaufloesung-rathenow-vorher-nachher.webp?url";
+import rathenowTeamTransporter from "@/assets/entruempelung-rathenow-team-transporter.webp?url";
+import premnitzTeamMoebel from "@/assets/wohnungsaufloesung-premnitz-team-moebelabtransport.webp?url";
+import premnitzKellerVorherNachher from "@/assets/entruempelung-premnitz-keller-vorher-nachher.webp?url";
+import friesackKellerVorherNachher from "@/assets/entruempelung-friesack-keller-vorher-nachher.webp?url";
+import friesackTeamHaushalt from "@/assets/kellerentruempelung-friesack-team-haushaltsaufloesung.webp?url";
+import schoenwaldeVorherNachher from "@/assets/haushaltsaufloesung-schoenwalde-glien-vorher-nachher.webp?url";
+import schoenwaldeTeamTransporter from "@/assets/entruempelung-schoenwalde-glien-team-transporter.webp?url";
+import ketzinVorherNachher from "@/assets/haushaltsaufloesung-ketzin-vorher-nachher.webp?url";
+import ketzinTeamMoebel from "@/assets/entruempelung-ketzin-team-moebeltransport.webp?url";
+import paulinenaueVorherNachher from "@/assets/haushaltsaufloesung-paulinenaue-vorher-nachher.webp?url";
+import paulinenaueTeamTransporter from "@/assets/entruempelung-paulinenaue-team-transporter.webp?url";
+import havellandTeamRaeumung from "@/assets/entruempelung-havelland-team-raeumungsservice.webp?url";
+import oranienburgMoebelabtransport from "@/assets/entruempelung-oranienburg-moebelabtransport.webp?url";
+import werderVorherNachher from "@/assets/entruempelung-werder-havel-vorher-nachher.webp?url";
+import hennigsdorfTeamTransporter from "@/assets/entruempelung-hennigsdorf-team-transporter.webp?url";
+import veltenKellerTeam from "@/assets/entruempelung-velten-keller-team.webp?url";
+import veltenHaushaltVorherNachher from "@/assets/haushaltsaufloesung-velten-vorher-nachher.webp?url";
 
 // Region-spezifische Bildergalerien (authentische Einsätze vor Ort)
 const REGION_GALLERIES: Record<

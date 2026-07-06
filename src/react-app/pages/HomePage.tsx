@@ -51,7 +51,7 @@ import {
 } from "@/lib/seo";
 
 // LCP Image: Import and preload for priority loading
-import sparschweinImage from "@/assets/sparschwein-entruempelung.webp";
+import sparschweinImage from "@/assets/sparschwein-entruempelung.webp?url";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Home,

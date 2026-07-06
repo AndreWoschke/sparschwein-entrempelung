@@ -1,7 +1,7 @@
 import { SERVICES, FAQ_ITEMS } from "@/lib/seo";
 import { ServicePageTemplate } from "./ServicePageTemplate";
 
-import kellerentruempelungImage from "@/assets/kellerentruempelung.webp";
+import kellerentruempelungImage from "@/assets/kellerentruempelung.webp?url";
 
 const service = SERVICES.find((s) => s.id === "kellerentruempelung")!;
 
