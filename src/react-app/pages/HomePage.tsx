@@ -180,7 +180,7 @@ export default function HomePage() {
             </span>
             
             <h1 id="hero-heading" className="mb-6 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-              Entrümpelung & Haushaltsauflösung{" "}
+              Entrümpelung & Haushaltsauflösung im Havelland{" "}
               <span className="block text-accent sm:inline">zum Festpreis</span>
             </h1>
             
