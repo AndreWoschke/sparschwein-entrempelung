@@ -33,3 +33,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Sensible lokale Kontextdateien (Infra/Deploy) — nie committen
+*.local.md
+CLAUDE.local.md
