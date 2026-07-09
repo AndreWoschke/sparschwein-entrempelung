@@ -65,6 +65,8 @@ import werderVorherNachher from "@/assets/entruempelung-werder-havel-vorher-nach
 import hennigsdorfTeamTransporter from "@/assets/entruempelung-hennigsdorf-team-transporter.webp?url";
 import veltenKellerTeam from "@/assets/entruempelung-velten-keller-team.webp?url";
 import veltenHaushaltVorherNachher from "@/assets/haushaltsaufloesung-velten-vorher-nachher.webp?url";
+import oranienburgVorherNachher from "@/assets/entruempelung-oranienburg-vorher-nachher.webp?url";
+import hennigsdorfVorherNachher from "@/assets/entruempelung-hennigsdorf-vorher-nachher.webp?url";
 
 // Region-spezifische Bildergalerien (authentische Einsätze vor Ort)
 const REGION_GALLERIES: Record<
@@ -205,12 +207,22 @@ const REGION_GALLERIES: Record<
   ],
   hennigsdorf: [
     {
+      src: hennigsdorfVorherNachher,
+      alt: "Vorher-Nachher: Keller- und Wohnungsentrümpelung in Hennigsdorf mit fachgerechter Entsorgung",
+      caption: "Vorher / Nachher – Keller- und Wohnungsentrümpelung in Hennigsdorf, vollständig geräumt und besenrein übergeben.",
+    },
+    {
       src: hennigsdorfTeamTransporter,
       alt: "Entrümpelung in Hennigsdorf mit professionellem Team und Transporter",
       caption: "Unser Team bei einer Wohnungsauflösung in Hennigsdorf – sicherer Möbeltransport im Treppenhaus.",
     },
   ],
   oranienburg: [
+    {
+      src: oranienburgVorherNachher,
+      alt: "Vorher-Nachher: Dachbodenentrümpelung in Oranienburg mit besenreiner Übergabe",
+      caption: "Vorher / Nachher – Komplette Dachboden- und Wohnungsentrümpelung in Oranienburg, besenrein übergeben.",
+    },
     {
       src: oranienburgMoebelabtransport,
       alt: "Entrümpelung in Oranienburg mit Möbelabtransport und besenreiner Übergabe",
