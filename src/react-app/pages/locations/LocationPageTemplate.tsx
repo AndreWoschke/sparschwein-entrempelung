@@ -67,6 +67,13 @@ import veltenKellerTeam from "@/assets/entruempelung-velten-keller-team.webp?url
 import veltenHaushaltVorherNachher from "@/assets/haushaltsaufloesung-velten-vorher-nachher.webp?url";
 import oranienburgVorherNachher from "@/assets/entruempelung-oranienburg-vorher-nachher.webp?url";
 import hennigsdorfVorherNachher from "@/assets/entruempelung-hennigsdorf-vorher-nachher.webp?url";
+// Ortsneutrale Vorher-Nachher-Fotos (echte Einsätze, ohne Ortsangabe – siehe SEO-Regeln B3/B9)
+import wohnungVorherNachher01 from "@/assets/wohnungsentruempelung-vorher-nachher-01.webp?url";
+import wohnungVorherNachher02 from "@/assets/wohnungsentruempelung-vorher-nachher-02.webp?url";
+import haushaltVorherNachher01 from "@/assets/haushaltsaufloesung-vorher-nachher-01.webp?url";
+import entruempelungVorherNachher01 from "@/assets/entruempelung-vorher-nachher-01.webp?url";
+import dachbodenVorherNachher01 from "@/assets/dachbodenentruempelung-vorher-nachher-01.webp?url";
+import kellerVorherNachher01 from "@/assets/kellerentruempelung-vorher-nachher-01.webp?url";
 
 // Region-spezifische Bildergalerien (authentische Einsätze vor Ort)
 const REGION_GALLERIES: Record<
@@ -235,12 +242,22 @@ const REGION_GALLERIES: Record<
       alt: "Vorher-Nachher: Entrümpelung in Werder (Havel) mit schneller Räumung und Entsorgung",
       caption: "Vorher / Nachher – Hof- und Garagenräumung in Werder (Havel), vollständig geräumt und entsorgt.",
     },
+    {
+      src: dachbodenVorherNachher01,
+      alt: "Vorher-Nachher: Dachbodenentrümpelung mit fachgerechter Entsorgung",
+      caption: "Vorher / Nachher – Dachbodenentrümpelung, vollständig geräumt und besenrein übergeben.",
+    },
   ],
   havelland: [
     {
       src: havellandTeamRaeumung,
       alt: "Entrümpelung im Landkreis Havelland mit zuverlässigem Räumungsservice",
       caption: "Unser Team im Landkreis Havelland – zuverlässiger Räumungsservice mit eigenen Mitarbeitern.",
+    },
+    {
+      src: wohnungVorherNachher01,
+      alt: "Vorher-Nachher: Wohnungsentrümpelung mit besenreiner Übergabe",
+      caption: "Vorher / Nachher – Wohnungsentrümpelung, vollständig geräumt und besenrein übergeben.",
     },
   ],
   velten: [
@@ -253,6 +270,30 @@ const REGION_GALLERIES: Record<
       src: veltenKellerTeam,
       alt: "Entrümpelung in Velten für Keller, Wohnung, Garage und Dachboden",
       caption: "Unser Team bei einer Kellerentrümpelung in Velten – persönlich vor Ort, eigene Fahrzeuge.",
+    },
+  ],
+  staaken: [
+    {
+      src: haushaltVorherNachher01,
+      alt: "Vorher-Nachher: Haushaltsauflösung mit besenreiner Übergabe",
+      caption: "Vorher / Nachher – Haushaltsauflösung, vollständig geräumt zum Festpreis.",
+    },
+    {
+      src: kellerVorherNachher01,
+      alt: "Vorher-Nachher: Kellerentrümpelung mit fachgerechter Entsorgung",
+      caption: "Vorher / Nachher – Kellerentrümpelung, vollständig geräumt und besenrein übergeben.",
+    },
+  ],
+  potsdam: [
+    {
+      src: wohnungVorherNachher02,
+      alt: "Vorher-Nachher: Wohnungsentrümpelung inklusive Küche mit vollständiger Räumung",
+      caption: "Vorher / Nachher – Wohnungsentrümpelung inkl. Küche, vollständig entrümpelt und besenrein übergeben.",
+    },
+    {
+      src: entruempelungVorherNachher01,
+      alt: "Vorher-Nachher: Entrümpelung eines Wohnraums mit besenreiner Übergabe",
+      caption: "Vorher / Nachher – Entrümpelung eines Wohnraums, vollständig geräumt und besenrein übergeben.",
     },
   ],
 };
